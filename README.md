@@ -1,6 +1,6 @@
 ![screencapture of halogen design](https://i.imgur.com/JK7C83p.png)
 
-_A web based application to add better lighting to video calls. It can be used on any device with a screen. Multiple devices are even better!_
+> _Halogen is a web based application to add lighting to video calls. It can be used on any device, desktop, mobile, tablet. The more devices used the more effective the lighting becomes._
 
 ---
 
