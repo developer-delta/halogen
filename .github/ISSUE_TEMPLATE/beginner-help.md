@@ -15,4 +15,4 @@ Please give a quick description of your skill level, and what technologies you a
 * 
 *
 
-_Feel free to list some things you'd like to practice, or enjoy working on as well!_
+Feel free to list some things you'd like to practice, or enjoy working on as well!
