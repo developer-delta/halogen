@@ -1,6 +1,6 @@
 ---
 name: Beginner help
-about: If you're not sure where to start...
+about: If you're not sure where to start, start here!
 title: 'Entry-level story requested'
 labels: beginner-work-wanted
 assignees: ''
