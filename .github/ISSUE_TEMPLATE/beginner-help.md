@@ -1,7 +1,7 @@
 ---
 name: Beginner help
 about: If you're not sure where to start...
-title: ''
+title: 'Entry-level story requested'
 labels: beginner-work-wanted
 assignees: ''
 
