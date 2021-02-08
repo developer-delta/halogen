@@ -8,7 +8,7 @@ _This guide will walk you through the steps you need to take to start contributi
 
 ### 1. First up, if you haven't already, make sure to `fork` this repository
 
-  _This is the first step in the open source development workflow._
+  _This is the first step in the open source development workflow. A fork is basically a **copy** _
 
 ### 2. Clone the repository down to your computer
 
@@ -71,3 +71,18 @@ _This guide will walk you through the steps you need to take to start contributi
   ![PR Button](https://i.imgur.com/MyX4Z02.png)
 
   You should get an approval or feedback within a couple days, and then your PR will either get merged and you'll be all done, or changes will be requested via comments, and you'll make edits, then `add`, `commit`, and `push` your fixes.
+
+  ---
+
+<!-- Create a new directory for some gitflow stuff. Go over the Open source forking git flow, and go over the regular working TBD gitflow stuff -->
+
+
+<!-- should this section live in that separate repository? Like a troubleshooting "If you see this message then go here to solve it?" -->
+## Rebasing and resolving conflicts 
+
+_When contributing to open source, you are working across `forks` of the repository, which means that keeping **your** fork (copy) of the halogen code up to date is important and this guide will help you do that!_
+
+Let's take a looks at an example to understand `rebasing` and `conflict` resolution.
+
+
+
