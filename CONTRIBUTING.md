@@ -2,6 +2,8 @@
 
 _This guide will walk you through the steps you need to take to start contributing to this repo!_
 
+[![Your first open source contribution](https://i.imgur.com/ykzMaD1.jpg)](https://youtu.be/qbSXgUFnQ2g)
+
 > This codebase is designed to be **approachable**. If you have a question, please ask! If you would like to try something out, open an issue and tell us about it! 
 
 ## First Contribution
