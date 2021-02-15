@@ -10,7 +10,7 @@ _This guide will walk you through the steps you need to take to start contributi
 
 ### 1. First up, if you haven't already, make sure to `fork` this repository
 
-  _This is the first step in the open source development workflow. A fork is basically a **copy** _
+  _This is the first step in the open source development workflow. A fork is basically a **copy**_
 
 ### 2. Clone the repository down to your computer
 
