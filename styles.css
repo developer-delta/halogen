@@ -103,7 +103,7 @@ body {
 #man-waving {
   position: absolute;
   width: 22%;
-  z-index: -1;
+  z-index: 0;
   top: 30px;
   right: 80px;
 }
