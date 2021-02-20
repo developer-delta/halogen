@@ -4,45 +4,54 @@
 }
 
 body {
-    background-color: lightseagreen;
+  background-color: lightseagreen;
+}
+
+p,
+button {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+button {
+  font-weight: 800;
 }
 
 .demo {
-    display: flex;
+  display: flex;
 }
 
 .demo-image img {
-    height: auto;
-    width: 55em;
-    display: inline-block;
+  height: auto;
+  width: 55em;
+  display: inline-block;
 }
 
 .demo .example-circles {
-    background-color: palegoldenrod;
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: palegoldenrod;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .outer-circle {
-    height: 14em;
-    width: 14em;
-    border: 60px solid white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 1px 1px 2px lightgrey, 0 0 25px yellow, 0 0 5px lightyellow;
+  height: 14em;
+  width: 14em;
+  border: 60px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 2px lightgrey, 0 0 25px yellow, 0 0 5px lightyellow;
 }
 
 .inner-circle {
-    height: 7em;
-    width: 7em;
-    border: 13px solid white;
-    border-radius: 50%;
-    box-shadow: 1px 1px 2px lightgrey, 0 0 25px yellow, 0 0 5px lightyellow;
+  height: 7em;
+  width: 7em;
+  border: 13px solid white;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px lightgrey, 0 0 25px yellow, 0 0 5px lightyellow;
 }
 
 .home-nav {
@@ -111,7 +120,7 @@ body {
   height: 6.5rem;
 }
 
-#description-box>p {
+#description-box > p {
   margin-top: 20px;
   font-size: 2.5rem;
   line-height: 3.6rem;
