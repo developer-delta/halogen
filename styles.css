@@ -105,7 +105,6 @@ footer .footer-madeby {
     width: 50%;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
 .footer-icons div {
@@ -121,6 +120,7 @@ footer .footer-madeby {
 .footer-icons img {
     height: 20px;
     opacity: 0.7;
+}
 
 .home-nav button {
     margin-right: 40px;
