@@ -21,7 +21,7 @@ _This guide will walk you through the steps you need to take to start contributi
   Navigate to the `issues` tab, and see if any of the current unassigned issues look like something you'd like to tackle. If one catches your eye, open it up and add a comment requesting that it gets assigned to you.
   * _If you're really feeling lost, but would like to get your feet wet just a little bit, go ahead and create an issue using the [Beginner help](https://github.com/developer-delta/halogen/issues/new?assignees=&labels=beginner-work-wanted&template=beginner-help.md&title=Entry-level+story+requested) template_.
 
-### 4. Wait to be assigned requested issue
+### 4. Wait to be assigned the requested issue
 
   If you selected an issue that was not assigned to someone else and had no comments on it, you can probably safely move forward to the next steps, but if you want to be certain someone else isn't doing the same work, you should wait to be assigned, it won't take long!
 
@@ -50,7 +50,7 @@ _This guide will walk you through the steps you need to take to start contributi
   ```shell
   git push --set-upstream origin your-cool-branch-name
   ```
-  * **NOTE**: You only need `--set-upstream origin branch-name` the _first_ time you push to a new branch. Subsequent pushes to that branch can just use `git push`.
+  > _You only need `--set-upstream origin branch-name` the _first_ time you push to a new branch. Subsequent pushes to that branch can just use `git push`._
 
 ### 10. Submit a pull request
 
@@ -74,17 +74,15 @@ _This guide will walk you through the steps you need to take to start contributi
 
   You should get an approval or feedback within a couple days, and then your PR will either get merged and you'll be all done, or changes will be requested via comments, and you'll make edits, then `add`, `commit`, and `push` your fixes.
 
-  ---
-
 <!-- Create a new directory for some gitflow stuff. Go over the Open source forking git flow, and go over the regular working TBD gitflow stuff -->
 
 
 <!-- should this section live in that separate repository? Like a troubleshooting "If you see this message then go here to solve it?" -->
-## Rebasing and resolving conflicts 
+<!-- ## Rebasing and resolving conflicts 
 
 _When contributing to open source, you are working across `forks` of the repository, which means that keeping **your** fork (copy) of the halogen code up to date is important and this guide will help you do that!_
 
-Let's take a looks at an example to understand `rebasing` and `conflict` resolution.
+Let's take a looks at an example to understand `rebasing` and `conflict` resolution. -->
 
 
 

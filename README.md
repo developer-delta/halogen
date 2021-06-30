@@ -1,6 +1,4 @@
-![screencapture of halogen design](https://i.imgur.com/JK7C83p.png)
-
-> _Halogen is a web based application to add lighting to video calls. It can be used on any device, desktop, mobile, tablet. The more devices used the more effective the lighting becomes._
+![screencapture of halogen design](https://i.imgur.com/wOqaeSV.png)
 
 ---
 
@@ -26,8 +24,6 @@
 ```shell
   open index.html
 ```
-
-_This repo is built on simple **JS**, **CSS**, and **HTML** to make this a beginner friendly project. **Simple and unimposing code can still be good code. Sometimes it's even better that way!**_
 
 ## Looking to contribute?
 
