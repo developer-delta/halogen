@@ -1,3 +1,9 @@
+---
+name: User story template
+about: This template provides a basic structure for user story issues.
+
+---
+
 ## User Story:
 
 > As a <role>,
