@@ -9,7 +9,7 @@ const client = new MongoClient(dbUri, { useUnifiedTopology: true });
 const PORT = process.env.PORT || 3001;
 
 const app = express();
-app.use(express.static(path.resolve(__dirname, "../client/build")));
+app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 app.get("/test-data", (req, res) => {
   client.connect((err) => {
