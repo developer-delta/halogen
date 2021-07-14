@@ -7,9 +7,9 @@ function App() {
 
   //Fetch API allows for asyncronous http requests and returns a promise.
   React.useEffect(() => {
-    fetch("/api")
+    fetch("/test-data")
       .then((res) => res.json())
-      .then((data) => setData(data.message));
+      .then((data) => setData(data[0].name));
   }, []);
 
   /* JSX is a templating language for React. It looks like a lot of HTML used for React. Currently, the codes show the curly
