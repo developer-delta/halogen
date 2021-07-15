@@ -18,12 +18,12 @@ client.connect((err) => {
   const dataTable = client.db("showtracker");
   dataTable
     .collection("shows")
-    .find()
+    .find({})
     .toArray((err, result) => {
       if (err) throw err;
       res.json(shows);
+      console.log(shows);
       console.log(result);
-      console.log("MongoDB Connected...");
       db.close();
     });
 });
