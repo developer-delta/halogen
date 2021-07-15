@@ -15,9 +15,9 @@ const client = new MongoClient(uri, {
 });
 
 client.connect((err) => {
-  const dataTable = client.db("showtracker");
+  const dataTable = client.db("test_db");
   dataTable
-    .collection("shows")
+    .collection("users")
     .find({})
     .toArray((result) => {
       if (err) throw err;
