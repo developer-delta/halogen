@@ -19,11 +19,10 @@ client.connect((err) => {
   dataTable
     .collection("shows")
     .find({})
-    .toArray((err, result) => {
+    .toArray((result) => {
       if (err) throw err;
-      res.json(shows);
+      res.json(result);
       console.log(shows);
-      console.log(result);
       db.close();
     });
 });

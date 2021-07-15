@@ -9,7 +9,6 @@ app.use(express.static(path.resolve(__dirname, "../client/build")));
 
 app.get("/showtracker", (req, res) => {
   connectDB();
-  res.send({ result: "connected Successfully" });
 });
 
 app.get("/api", (req, res) => {
