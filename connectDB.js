@@ -2,32 +2,32 @@ if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
 
-//Import MongoClient as MongoDB module exports MongoClient which allow us to connect to a MongoDB database.
-const { MongoClient } = require("mongodb");
+  //Import MongoClient as MongoDB module exports MongoClient which allow us to connect to a MongoDB database.
+  const { MongoClient } = require("mongodb");
 
-//Creating a constant for conection to URI or config vars
-const uri = process.env.HALOGEN_WEB;
+  //Creating a constant for conection to URI or config vars
+  const uri = process.env.HALOGEN_WEB;
 
-//An instance of MongoClient after adding config vars
-const client = new MongoClient(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+  //An instance of MongoClient after adding config vars
+  const client = new MongoClient(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 
-client.connect((err) => {
-  const dataTable = client.db("test_db");
-  dataTable
-    .collection("users")
-    .find({})
-    .toArray((result) => {
-      if (err) throw err;
-      res.json(result);
-      console.log(shows);
-      db.close();
-    });
-});
+module.exports{
+  client.connect((err) => {
+    const dataTable = client.db("showtracker");
+    dataTable
+      .collection("shows")
+      .find({})
+      .toArray((result) => {
+        if (err) throw err;
+        return result;
+      });
+    client.close();
+  });
+}
 
-module.exports = connectDB;
 
 /* 
 client.connect((err) => {
