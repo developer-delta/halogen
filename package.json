@@ -7,7 +7,8 @@
     "node": "16.4.2"
   },
   "scripts": {
-    "start": "node server/index.js",
+    "client": "cd client && npm start",
+    "server": "nodemon server/index.js",
     "build": "cd client && npm install && npm run build"
   },
   "repository": {
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/developer-delta/halogen#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
   }
 }
