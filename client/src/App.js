@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
@@ -18,6 +17,9 @@ function App() {
     of a JSX element will be read as text like HTML and not as JavaScript. */
   return (
     <div className="App">
+
+      <header className="App-header">
+
       {/* Should we be including all this text in header? Should we also be using body? */}
       <header className="App-header"> 
         <nav className= "nav-bar">
@@ -39,6 +41,7 @@ function App() {
 
         </footer>
         <img src={logo} className="App-logo" alt="logo" />
+         main
         <p>{!data ? "Loading..." : data}</p>{" "}
         {/* If no data message, then it will load otherwise, there is a data message */}
       </header>
