@@ -19,11 +19,8 @@
 ```shell
   cd halogen
 ```
-
-#### 5. Open `html` file
-```shell
-  open index.html
-```
+#### 5. Make sure you have your IDE install 
+[Visual Studio Code is recommended](https://code.visualstudio.com/download)
 
 ## Looking to contribute?
 
