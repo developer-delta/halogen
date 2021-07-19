@@ -8,7 +8,7 @@ function App() {
   React.useEffect(() => {
     fetch("/showtracker")
       .then((res) => res.json())
-      .then((data) => setData(data[2].artist));
+      .then((data) => setData(data[0]));
   }, []);
 
   /* JSX is a templating language for React. It looks like a lot of HTML used for React. Currently, the codes show the curly
