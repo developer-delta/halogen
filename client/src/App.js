@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
 
-      <header className="App-header">
+      {/* <header className="App-header"> */}
 
       {/* Should we be including all this text in header? Should we also be using body? */}
       <header className="App-header"> 
@@ -40,7 +40,7 @@ function App() {
         <footer className="bottom">
 
         </footer>
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
          main
         <p>{!data ? "Loading..." : data}</p>{" "}
         {/* If no data message, then it will load otherwise, there is a data message */}
