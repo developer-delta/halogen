@@ -14,6 +14,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+Runs the app from the terminal.\
+When you are in your directroy, cd halogen and then cd client. 
+In client, run the command npm start to get the application running.
+Application will open in your browswer automatically.  
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
