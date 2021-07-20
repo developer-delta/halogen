@@ -19,11 +19,8 @@
 ```shell
   cd halogen
 ```
-
-#### 5. Open `html` file
-```shell
-  open index.html
-```
+#### 5. Make sure you have your IDE install 
+[Visual Studio Code is recommended](https://code.visualstudio.com/download)
 
 ## For Visual Studio Code users 
 Here is the `launch.json` configuration for running the server and the client simultaneously
