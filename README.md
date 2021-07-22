@@ -19,11 +19,45 @@
 ```shell
   cd halogen
 ```
+#### 5. Make sure you have your IDE install 
+[Visual Studio Code is recommended](https://code.visualstudio.com/download)
 
-#### 5. Open `html` file
-```shell
-  open index.html
+## For Visual Studio Code users 
+Here is the `launch.json` configuration for running the server and the client simultaneously
 ```
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Server",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/nodemon/bin/nodemon.js",
+      "program": "${workspaceFolder}/server/index.js",
+      "outputCapture": "std"
+    },
+    {
+      "type": "pwa-chrome",
+      "request": "launch",
+      "name": "Client",
+      "preLaunchTask": "npm: client",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceRoot}/client/src",
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Server and Client",
+      "configurations": ["Server", "Client"]
+    }
+  ]
+}
+```
+
+---
 
 ## Looking to contribute?
 

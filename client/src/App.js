@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import Button from "./Button";
 
 function App() {
   const [data, setData] = React.useState(null);
@@ -18,28 +18,23 @@ function App() {
     of a JSX element will be read as text like HTML and not as JavaScript. */
   return (
     <div className="App">
+      {/* <header className="App-header"> */}
+
       {/* Should we be including all this text in header? Should we also be using body? */}
-      <header className="App-header"> 
-        <nav className= "nav-bar">
-          <p>{"Sign Up"}</p>
+      <header className="App-header">
+        <nav className="nav-bar">
+          <Button text="Sign Up" />
         </nav>
-        <section className="hero">
-        
-        </section>
-        <section className="app-info">
+        <section className="hero"></section>
+        <section className="app-info"></section>
+        <section className="your-pick"></section>
+        <section className="palette"></section>
+        <footer className="bottom"></footer>
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
 
-        </section>
-        <section className="your-pick">
+         main
+        <p class="heading-font">{ !data ? "Loading..." : data}</p>{" "}
 
-        </section>
-        <section  className="palette">
-
-        </section>
-        <footer className="bottom">
-
-        </footer>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{!data ? "Loading..." : data}</p>{" "}
         {/* If no data message, then it will load otherwise, there is a data message */}
       </header>
     </div>

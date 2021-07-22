@@ -1,5 +1,6 @@
-const path = require('path');
+const path = require("path");
 const express = require("express");
+require("dotenv").config();
 
 const PORT = process.env.PORT || 3001;
 
@@ -39,6 +40,7 @@ db.once('open', function() {
     console.log(kittens);
   })
   Kitten.find({ name: /^fluff/ }, callback);
+
 });
 
 app.get("/api", (req, res) => {
@@ -46,8 +48,8 @@ app.get("/api", (req, res) => {
   res.json({ message: "Halogen under construction" });
 });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../client/public", "index.html"));
 });
 
 app.listen(PORT, () => {
