@@ -6,12 +6,16 @@
   height: 40vmin;
   pointer-events: none;
 }
+.heading-font{
+  font-family: 'Nunito Sans', sans-serif;
+  }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 
 .App-header {
   background-color: #8a2dc0;
@@ -28,14 +32,14 @@
   color: #8a2dc0;
 }
 
-@keyframes App-logo-spin {
+/*@keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+}*/
 .nav-bar{
   margin-top: 1%;
   border: solid;
@@ -43,3 +47,4 @@
   justify-content: flex-end;
   padding-right: 5%;
 }
+

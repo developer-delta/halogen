@@ -31,8 +31,10 @@ function App() {
         <section className="palette"></section>
         <footer className="bottom"></footer>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        main
-        <p>{!data ? "Loading..." : data}</p>{" "}
+
+         main
+        <p class="heading-font">{ !data ? "Loading..." : data}</p>{" "}
+
         {/* If no data message, then it will load otherwise, there is a data message */}
       </header>
     </div>
