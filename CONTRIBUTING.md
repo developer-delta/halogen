@@ -39,6 +39,9 @@ _This guide will walk you through the steps you need to take to start contributi
   git add changed-file1.html
   git add changed-file2.js
   git add changed-file3.css
+  
+  you can also run: git add .
+  This will automatically add all the files you made changes too. 
   ```
 
 ### 8. Commit your code changes
