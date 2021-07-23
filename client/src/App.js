@@ -29,13 +29,55 @@ function App() {
         <section className="app-info"></section>
         <section className="your-pick"></section>
         <section className="palette"></section>
-        <footer className="bottom"></footer>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-
-         main
-        <p class="heading-font">{ !data ? "Loading..." : data}</p>{" "}
-
+        main
+        <p class="heading-font">{!data ? "Loading..." : data}</p>{" "}
         {/* If no data message, then it will load otherwise, there is a data message */}
+        <footer className="fixed bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
+          <div class="flex space-x-10 ...">
+            <div>
+              <a href="#">
+                <img
+                  className="bg-white rounded-full h-10"
+                  src="/images/twitter.png"
+                  alt="Twiiter's icon"
+                />
+              </a>
+            </div>
+
+            <div>
+              <a href="#">
+                <img
+                  className="bg-white rounded-full h-10"
+                  src="/images/github.png"
+                  alt="GitHub's icon"
+                />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img
+                  className="bg-white rounded-full h-10"
+                  src="/images/insta.png"
+                  alt="instagram's icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="mt-5">
+            <h2>Made with 🤝 by CodeDay Labs</h2>
+            <h2 className="text-base italic">
+              Released under the
+              <a
+                href="https://en.wikipedia.org/wiki/MIT_License"
+                target="_blank"
+              >
+                {" "}
+                MIT license
+              </a>
+            </h2>
+          </div>
+        </footer>
       </header>
     </div>
   );
