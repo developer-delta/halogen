@@ -34,7 +34,7 @@ function App() {
         <p class="heading-font">{!data ? "Loading..." : data}</p>{" "}
         {/* If no data message, then it will load otherwise, there is a data message */}
         <footer className="fixed bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
-          <div class="flex space-x-10 ...">
+          <address class="flex space-x-10">
             <div>
               <a href="#">
                 <img
@@ -63,10 +63,10 @@ function App() {
                 />
               </a>
             </div>
-          </div>
+          </address>
           <div class="mt-5">
-            <h2>Made with 🤝 by CodeDay Labs</h2>
-            <h2 className="text-base italic">
+            <p>Made with 🤝 by CodeDay Labs</p>
+            <p className="text-base italic">
               Released under the
               <a
                 href="https://en.wikipedia.org/wiki/MIT_License"
@@ -75,7 +75,7 @@ function App() {
                 {" "}
                 MIT license
               </a>
-            </h2>
+            </p>
           </div>
         </footer>
       </header>
