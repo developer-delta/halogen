@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Button from "./Button";
+import linearGradient from "./LinearGradient";
 
 function App() {
   const [data, setData] = React.useState(null);
@@ -22,6 +23,7 @@ function App() {
 
       {/* Should we be including all this text in header? Should we also be using body? */}
       <header className="App-header">
+        <linearGradient text = "background"/>
         <nav className="nav-bar">
           <Button text="Sign Up" />
         </nav>
