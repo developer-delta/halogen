@@ -23,7 +23,7 @@ function App() {
 
       {/* Should we be including all this text in header? Should we also be using body? */}
       <header className="App-header">
-        <linearGradient text = "background"/>
+      <linearGradient />
         <nav className="nav-bar">
           <Button text="Sign Up" />
         </nav>
