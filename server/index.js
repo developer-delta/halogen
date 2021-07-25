@@ -10,7 +10,7 @@ app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 // getting-started.js
 const mongoose = require('mongoose');
-mongoose.connect(process.env.HALOGEN_WEB || 'mongodb+srv://hnegash:AiVb0JWV7MOejVIt@halogen-west.d2kkg.mongodb.net/showtracker?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.HALOGEN_WEB || 'mongodb://localhost:3001/showtracker', {useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
