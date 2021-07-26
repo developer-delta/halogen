@@ -34,7 +34,8 @@ function App() {
         main
         <p class="heading-font">{!data ? "Loading..." : data}</p>{" "}
         {/* If no data message, then it will load otherwise, there is a data message */}
-        <TextInput />
+        <TextInput placeholder="Email address" />
+        <TextInput placeholder="Password" />
         <footer className="fixed bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
           <address class="flex space-x-10">
             <div>
