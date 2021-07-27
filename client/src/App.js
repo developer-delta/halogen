@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Button from "./Button";
-import linearGradient from "./LinearGradient";
+import LinearGradient from "./LinearGradient";
 
 function App() {
   const [data, setData] = React.useState(null);
@@ -23,7 +23,10 @@ function App() {
 
       {/* Should we be including all this text in header? Should we also be using body? */}
       <header className="App-header">
-      <linearGradient />
+        <LinearGradient width="100px"/>
+        <LinearGradient width="300px"/>
+        <LinearGradient width="500px"/>
+
         <nav className="nav-bar">
           <Button text="Sign Up" />
         </nav>
@@ -35,7 +38,7 @@ function App() {
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
 
          main
-        <p class="heading-font">{ !data ? "Loading..." : data}</p>{" "}
+        <p className="heading-font">{ !data ? "Loading..." : data}</p>{" "}
 
         {/* If no data message, then it will load otherwise, there is a data message */}
       </header>

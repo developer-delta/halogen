@@ -1,10 +1,16 @@
 import React from "react";
 
-function linearGradient() {
+function linearGradient(props) {
+
   return (
-    <div class="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
-    </div>
+    <div
+      style={{ width: props.width }}
+      class='bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 halogen-line'>
+      </div>
   );
 }
 
 export default linearGradient;
+
+
+
