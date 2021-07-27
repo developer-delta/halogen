@@ -5,35 +5,19 @@ require("dotenv").config();
 const PORT = process.env.PORT || 3001;
 
 const app = express();
-app.use(express.static(path.resolve(__dirname, "../client/build")));
+app.use(express.static(path.resolve(__dirname, '../client/build')));
+//Mongoose setup code below
 
-//Import MongoClient as MongoDB module exports MongoClient which allow us to connect to a MongoDB database.
-const { MongoClient } = require("mongodb");
+// getting-started.js
+const mongoose = require('mongoose');
+mongoose.connect(process.env.HALOGEN_WEB || 'mongodb://localhost:3001/showtracker', {useNewUrlParser: true, useUnifiedTopology: true});
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("It's working!");
 
-//Creating a constant for conection to URI or config vars
-const uri = process.env.HALOGEN_WEB;
-
-//An instance of MongoClient after adding config vars
-const client = new MongoClient(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
 });
-
-app.get("/showtracker", (req, res) => {
-  client.connect((err) => {
-    const dataTable = client.db("showtracker");
-    dataTable
-      .collection("shows")
-      .find({})
-      .toArray()
-      .then((shows) => {
-        if (err) throw err;
-        return res.json(shows);
-      })
-      .then(() => client.close());
-  });
-});
-
+  
 app.get("/api", (req, res) => {
   //json stands for javascript object notation (data type)
   res.json({ message: "Halogen under construction" });
