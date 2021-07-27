@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Button from "./Button";
 import LinearGradient from "./LinearGradient";
+import TextInput from "./TextInput";
 
 function App() {
   const [data, setData] = React.useState(null);
@@ -34,13 +35,57 @@ function App() {
         <section className="app-info"></section>
         <section className="your-pick"></section>
         <section className="palette"></section>
-        <footer className="bottom"></footer>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-
          main
         <p className="heading-font">{ !data ? "Loading..." : data}</p>{" "}
-
         {/* If no data message, then it will load otherwise, there is a data message */}
+        <TextInput placeholder="Email address" />
+        <TextInput placeholder="Password" />
+        <footer className="fixed bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
+          <address class="flex space-x-10">
+            <div>
+              <a href="#">
+                <img
+                  className="bg-white rounded-full h-10"
+                  src="/images/twitter.png"
+                  alt="Twiiter's icon"
+                />
+              </a>
+            </div>
+
+            <div>
+              <a href="#">
+                <img
+                  className="bg-white rounded-full h-10"
+                  src="/images/github.png"
+                  alt="GitHub's icon"
+                />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img
+                  className="bg-white rounded-full h-10"
+                  src="/images/insta.png"
+                  alt="instagram's icon"
+                />
+              </a>
+            </div>
+          </address>
+          <div class="mt-5">
+            <p>Made with 🤝 by CodeDay Labs</p>
+            <p className="text-base italic">
+              Released under the
+              <a
+                href="https://en.wikipedia.org/wiki/MIT_License"
+                target="_blank"
+              >
+                {" "}
+                MIT license
+              </a>
+            </p>
+          </div>
+        </footer>
       </header>
     </div>
   );
