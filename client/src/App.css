@@ -18,7 +18,8 @@
 
 
 .App-header {
-  background-color: #8a2dc0;
+  /*background-color: #a50eb3;*/
+  /* background: linear-gradient(#e66465, #9198e5); */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,8 +29,14 @@
   color: white;
 }
 
+.halogen-line{
+height: 3px;
+
+
+}
+
 .App-link {
-  color: #8a2dc0;
+  color: #1f657a;
 }
 
 /*@keyframes App-logo-spin {

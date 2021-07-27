@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Button from "./Button";
+import LinearGradient from "./LinearGradient";
 import TextInput from "./TextInput";
 
 function App() {
@@ -23,6 +24,10 @@ function App() {
 
       {/* Should we be including all this text in header? Should we also be using body? */}
       <header className="App-header">
+        <LinearGradient width="100px"/>
+        <LinearGradient width="300px"/>
+        <LinearGradient width="500px"/>
+
         <nav className="nav-bar">
           <Button text="Sign Up" />
         </nav>
@@ -31,8 +36,8 @@ function App() {
         <section className="your-pick"></section>
         <section className="palette"></section>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        main
-        <p class="heading-font">{!data ? "Loading..." : data}</p>{" "}
+         main
+        <p className="heading-font">{ !data ? "Loading..." : data}</p>{" "}
         {/* If no data message, then it will load otherwise, there is a data message */}
         <TextInput placeholder="Email address" />
         <TextInput placeholder="Password" />
