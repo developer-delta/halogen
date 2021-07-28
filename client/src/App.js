@@ -1,4 +1,6 @@
 //Import is to bring information from the particular address into this file. This file is then able to export information.
+/* Importing React allows us to access its library and pull in the "react" module from our node_modules directory. If we don't
+ have react added as a dependency in our package.json, there will be nothing to import. */
 import React from "react";
 import "./App.css"; //Importing the styles from the App.css file. The typical syntax is not used but the address of the CSS file.
 import Button from "./Button";
@@ -8,9 +10,9 @@ import TextInput from "./TextInput";
 //A functional component is the JavaScript function. App is the name of the function.
 function App() {
   //A syntax of useState hook is Destructuring Assignment what looks like properties of an array. It is concise and readable.
-  /* The useState is a named export from the React library. This hook returns an array of two values - the current state value
-     & the state setter, where we update the value of this state.  Null is an initial state argument, and this indicates 
-     we  don't have the value needed during the first render. */
+  /* useState is a react method that returns an array of two values - the current state value & the state setter, where we 
+     update the value of this state.  Null is an initial state argument, and this indicates we  don't have the value needed 
+     during the first render. */
   const [data, setData] = React.useState(null);
 
   //Fetch API allows for asyncronous http requests and returns a promise.
@@ -20,7 +22,7 @@ function App() {
     fetch("/api")
       //.then() function returns a promise (promise is like a placeholder for a value).
       .then((res) => res.json()) //Return a promise that results in parsing the body as JSON.
-      .then((data) => setData(data.message)); //We call setState state setter function to update data message
+      .then((data) => setData(data.message)); //We call setData to update data message
   }, []);
 
   /* JSX is a templating language for React. It looks like a lot of HTML used for React. Currently, the codes show the curly
