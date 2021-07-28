@@ -1,17 +1,28 @@
+//Import is to bring information from the particular address into this file. This file is then able to export information.
+/* Importing React allows us to access its library and pull in the "react" module from our node_modules directory. If we don't
+ have react added as a dependency in our package.json, there will be nothing to import. */
 import React from "react";
-import "./App.css";
+import "./App.css"; //Importing the styles from the App.css file. The typical syntax is not used but the address of the CSS file.
 import Button from "./Button";
 import LinearGradient from "./LinearGradient";
 import TextInput from "./TextInput";
 
+//A functional component is the JavaScript function. App is the name of the function.
 function App() {
+  //A syntax of useState hook is Destructuring Assignment what looks like properties of an array. It is concise and readable.
+  /* useState is a react method that returns an array of two values - the current state value & the state setter, where we 
+     update the value of this state.  Null is an initial state argument, and this indicates we  don't have the value needed 
+     during the first render. */
   const [data, setData] = React.useState(null);
 
   //Fetch API allows for asyncronous http requests and returns a promise.
+  /* useEffect hook is a named export from the React library. It is explained as that the effect happens after render (whenever
+     a change happens). Currently, the useEffect is performing the data fetching. */
   React.useEffect(() => {
     fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
+      //.then() function returns a promise (promise is like a placeholder for a value).
+      .then((res) => res.json()) //Return a promise that results in parsing the body as JSON.
+      .then((data) => setData(data.message)); //We call setData to update data message
   }, []);
 
   /* JSX is a templating language for React. It looks like a lot of HTML used for React. Currently, the codes show the curly
@@ -22,12 +33,10 @@ function App() {
     <div className="App">
       {/* <header className="App-header"> */}
 
-      {/* Should we be including all this text in header? Should we also be using body? */}
       <header className="App-header">
-        <LinearGradient width="100px"/>
-        <LinearGradient width="300px"/>
-        <LinearGradient width="500px"/>
-
+        <LinearGradient width="100px" />
+        <LinearGradient width="300px" />
+        <LinearGradient width="500px" />
         <nav className="nav-bar">
           <Button text="Sign Up" />
         </nav>
@@ -35,9 +44,8 @@ function App() {
         <section className="app-info"></section>
         <section className="your-pick"></section>
         <section className="palette"></section>
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-         main
-        <p className="heading-font">{ !data ? "Loading..." : data}</p>{" "}
+        main
+        <p className="heading-font">{!data ? "Loading..." : data}</p>{" "}
         {/* If no data message, then it will load otherwise, there is a data message */}
         <TextInput placeholder="Email address" />
         <TextInput placeholder="Password" />
@@ -90,5 +98,5 @@ function App() {
     </div>
   );
 }
-
+//This exports App class to make it work and exposed. Without it, we won't be able to use or have access to it.
 export default App;
