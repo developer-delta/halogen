@@ -41,10 +41,16 @@
   height: 95%;
 }
 
+.sketchpicker {
+  position: absolute;
+  top: 27.4vh;
+  right: 2vw;
+}
+
 .lightbox-circle {
-  border: 90px solid #fff;
-  height: 705px;
-  width: 705px;
+  border: 6.3vw solid #fff;
+  height: 90.5%;
+  width: 51.56%;
   border-radius: 50%;
   margin: 40px auto;
 }
