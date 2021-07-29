@@ -10,7 +10,7 @@
     "start": "node server/index.js",
     "client": "cd client && npm start",
     "server": "nodemon server/index.js",
-    "build": "cd client && npm install --save mongoose && npm run build"
+    "build": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongodb": "^4.0.0",
+    "mongoose": "^5.13.4",
     "nodemon": "^2.0.12"
   }
 }
