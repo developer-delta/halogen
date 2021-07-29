@@ -6,6 +6,7 @@ import "./App.css"; //Importing the styles from the App.css file. The typical sy
 import Button from "./Button";
 import LinearGradient from "./LinearGradient";
 import TextInput from "./TextInput";
+import { SketchPicker } from "react-color";
 
 //A functional component is the JavaScript function. App is the name of the function.
 function App() {
@@ -14,6 +15,8 @@ function App() {
      update the value of this state.  Null is an initial state argument, and this indicates we  don't have the value needed 
      during the first render. */
   const [data, setData] = React.useState(null);
+  const [color, setColor] = React.useState("#47C4AF");
+  const [hidden, setHidden] = React.useState("false");
 
   //Fetch API allows for asyncronous http requests and returns a promise.
   /* useEffect hook is a named export from the React library. It is explained as that the effect happens after render (whenever
@@ -42,14 +45,34 @@ function App() {
         </nav>
         <section className="hero"></section>
         <section className="app-info"></section>
-        <section className="your-pick"></section>
+        <section className="lightbox w-screen h-screen justify-center items-center flex">
+          <div
+            style={{ background: color }}
+            className="lightbox-sub rounded-lg"
+          >
+            <div className="lightbox-circle"></div>
+            {hidden && (
+              <SketchPicker
+                className="float-right absolute right-20 top-80"
+                color={color}
+                onChange={(updatedColor) => setColor(updatedColor.hex)}
+              />
+            )}
+            <button
+              onClick={() => setHidden(!hidden)}
+              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right relative right-5 bottom-60"
+            >
+              {hidden ? "Close color picker" : "Open color picker"}
+            </button>
+          </div>
+        </section>
         <section className="palette"></section>
         main
         <p className="heading-font">{!data ? "Loading..." : data}</p>{" "}
         {/* If no data message, then it will load otherwise, there is a data message */}
         <TextInput placeholder="Email address" />
         <TextInput placeholder="Password" />
-        <footer className="fixed bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
+        <footer className="bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
           <address class="flex space-x-10">
             <div>
               <a href="#">
@@ -60,7 +83,6 @@ function App() {
                 />
               </a>
             </div>
-
             <div>
               <a href="#">
                 <img

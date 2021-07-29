@@ -6,16 +6,15 @@
   height: 40vmin;
   pointer-events: none;
 }
-.heading-font{
-  font-family: 'Nunito Sans', sans-serif;
-  }
+.heading-font {
+  font-family: "Nunito Sans", sans-serif;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 
 .App-header {
   /*background-color: #a50eb3;*/
@@ -29,14 +28,25 @@
   color: white;
 }
 
-.halogen-line{
-height: 3px;
-
-
+.halogen-line {
+  height: 3px;
 }
 
 .App-link {
   color: #1f657a;
+}
+
+.lightbox-sub {
+  width: 95%;
+  height: 95%;
+}
+
+.lightbox-circle {
+  border: 90px solid #fff;
+  height: 705px;
+  width: 705px;
+  border-radius: 50%;
+  margin: 40px auto;
 }
 
 /*@keyframes App-logo-spin {
@@ -47,11 +57,10 @@ height: 3px;
     transform: rotate(360deg);
   }
 }*/
-.nav-bar{
+.nav-bar {
   margin-top: 1%;
   border: solid;
   display: flex;
   justify-content: flex-end;
   padding-right: 5%;
 }
-
