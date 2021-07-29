@@ -80,7 +80,7 @@ function App() {
         <footer className="bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
           <address class="flex space-x-10">
             <div>
-              <a href="#">
+              <a href="https://github.com/developer-delta/halogen">
                 <img
                   className="bg-white rounded-full h-10"
                   src="/images/twitter.png"
