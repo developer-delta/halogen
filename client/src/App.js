@@ -6,6 +6,7 @@ import "./App.css"; //Importing the styles from the App.css file. The typical sy
 import Button from "./Button";
 import LinearGradient from "./LinearGradient";
 import TextInput from "./TextInput";
+import { SketchPicker } from "react-color";
 
 //A functional component is the JavaScript function. App is the name of the function.
 function App() {
@@ -13,7 +14,14 @@ function App() {
   /* useState is a react method that returns an array of two values - the current state value & the state setter, where we 
      update the value of this state.  Null is an initial state argument, and this indicates we  don't have the value needed 
      during the first render. */
+
   const [data, setData] = React.useState(null);
+  /* This keeps track of our color; it allows us to change the background based on the color picker. To add background's color is
+     to equal the color state, and the current initial is #47C4AF. To change color is to use setColor by using change event. */
+  const [color, setColor] = React.useState("#47C4AF");
+  /* Hidden is for a button to close the color picker, so there is a ternary operator or condition for it. Initially, it is 
+     false, so setHidden is to toggle based on the false or true. */
+  const [hidden, setHidden] = React.useState("false");
 
   //Fetch API allows for asyncronous http requests and returns a promise.
   /* useEffect hook is a named export from the React library. It is explained as that the effect happens after render (whenever
@@ -42,14 +50,34 @@ function App() {
         </nav>
         <section className="hero"></section>
         <section className="app-info"></section>
-        <section className="your-pick"></section>
+        <section className="lightbox w-screen h-screen justify-center items-center flex">
+          <div
+            style={{ background: color }}
+            className="lightbox-sub rounded-lg relative "
+          >
+            <div className="lightbox-circle"></div>
+            {hidden && (
+              <SketchPicker
+                className="sketchpicker float-right"
+                color={color}
+                onChange={(updatedColor) => setColor(updatedColor.hex)}
+              />
+            )}
+            <button
+              onClick={() => setHidden(!hidden)}
+              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right relative right-5 bottom-60 "
+            >
+              {hidden ? "Close color picker" : "Open color picker"}
+            </button>
+          </div>
+        </section>
         <section className="palette"></section>
         main
         <p className="heading-font">{!data ? "Loading..." : data}</p>{" "}
         {/* If no data message, then it will load otherwise, there is a data message */}
         <TextInput placeholder="Email address" />
         <TextInput placeholder="Password" />
-        <footer className="fixed bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
+        <footer className="bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
           <address class="flex space-x-10">
             <div>
               <a href="#">
@@ -60,7 +88,6 @@ function App() {
                 />
               </a>
             </div>
-
             <div>
               <a href="#">
                 <img
