@@ -1,21 +1,21 @@
 .App {
   text-align: center;
+  background-image: radial-gradient(circle farthest-side at top center, #434343 0%, #2F2C2C 36%);
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-.heading-font{
-  font-family: 'Nunito Sans', sans-serif;
-  }
+.heading-font {
+  font-family: "Nunito Sans", sans-serif;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 
 .App-header {
   /*background-color: #a50eb3;*/
@@ -29,14 +29,31 @@
   color: white;
 }
 
-.halogen-line{
-height: 3px;
-
-
+.halogen-line {
+  height: 3px;
 }
 
 .App-link {
   color: #1f657a;
+}
+
+.lightbox-sub {
+  width: 95%;
+  height: 95%;
+}
+
+.sketchpicker {
+  position: absolute;
+  top: 27.4vh;
+  right: 2vw;
+}
+
+.lightbox-circle {
+  border: 6.3vw solid #fff;
+  height: 90.5%;
+  width: 51.56%;
+  border-radius: 50%;
+  margin: 40px auto;
 }
 
 /*@keyframes App-logo-spin {
@@ -47,11 +64,3 @@ height: 3px;
     transform: rotate(360deg);
   }
 }*/
-.nav-bar{
-  margin-top: 1%;
-  border: solid;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 5%;
-}
-
