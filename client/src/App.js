@@ -4,8 +4,8 @@
 import React from "react";
 import "./App.css"; //Importing the styles from the App.css file. The typical syntax is not used but the address of the CSS file.
 import Button from "./Button";
-import LinearGradient from "./LinearGradient";
-import TextInput from "./TextInput";
+// import LinearGradient from "./LinearGradient";
+// import TextInput from "./TextInput";
 import { SketchPicker } from "react-color";
 
 //A functional component is the JavaScript function. App is the name of the function.
@@ -39,12 +39,10 @@ function App() {
     of a JSX element will be read as text like HTML and not as JavaScript. */
   return (
     <div className="App">
-      {/* <header className="App-header"> */}
-
       <header className="App-header">
-        <LinearGradient width="100px" />
+        {/* <LinearGradient width="100px" />
         <LinearGradient width="300px" />
-        <LinearGradient width="500px" />
+        <LinearGradient width="500px" /> */}
         <nav className="fixed w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg bg-gray-600 bg-opacity-50">
           <button className="px-7">
             <img
@@ -56,35 +54,36 @@ function App() {
           </button>
           <Button text="Sign Up" />
         </nav>
-        <section className="hero"></section>
-        <section className="app-info"></section>
-        <section className="lightbox w-screen h-screen justify-center items-center flex">
-          <div
-            style={{ background: color }}
-            className="lightbox-sub rounded-lg relative "
-          >
-            <div className="lightbox-circle"></div>
-            {hidden && (
-              <SketchPicker
-                className="sketchpicker float-right"
-                color={color}
-                onChange={(updatedColor) => setColor(updatedColor.hex)}
-              />
-            )}
-            <button
-              onClick={() => setHidden(!hidden)}
-              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right relative right-5 bottom-60 "
+        <main>
+          <section className="hero"></section>
+          <section className="app-info"></section>
+          <section className="lightbox w-screen h-screen justify-center items-center flex">
+            <div
+              style={{ background: color }}
+              className="lightbox-sub rounded-lg relative "
             >
-              {hidden ? "Close color picker" : "Open color picker"}
-            </button>
-          </div>
-        </section>
-        <section className="palette"></section>
-        main
+              <div className="lightbox-circle"></div>
+              {hidden && (
+                <SketchPicker
+                  className="sketchpicker float-right"
+                  color={color}
+                  onChange={(updatedColor) => setColor(updatedColor.hex)}
+                />
+              )}
+              <button
+                onClick={() => setHidden(!hidden)}
+                className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right relative right-5 bottom-60 "
+              >
+                {hidden ? "Close color picker" : "Open color picker"}
+              </button>
+            </div>
+          </section>
+          <section className="palette"></section>
+        </main>
         <p className="heading-font">{!data ? "Loading..." : data}</p>{" "}
         {/* If no data message, then it will load otherwise, there is a data message */}
-        <TextInput placeholder="Email address" />
-        <TextInput placeholder="Password" />
+        {/* <TextInput placeholder="Email address" />
+        <TextInput placeholder="Password" /> */}
         <footer className="bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
           <address class="flex space-x-10">
             <div>
