@@ -42,9 +42,9 @@ function App() {
       {/* <header className="App-header"> */}
 
       <header className="App-header">
-        {/* <LinearGradient width="100px" />
+        <LinearGradient width="100px" />
         <LinearGradient width="300px" />
-        <LinearGradient width="500px" /> */}
+        <LinearGradient width="500px" />
         <nav className="fixed w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg border-b border-gray-200">
           <button className="px-7">
             <img
