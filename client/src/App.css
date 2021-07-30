@@ -63,10 +63,3 @@
     transform: rotate(360deg);
   }
 }*/
-.nav-bar {
-  margin-top: 1%;
-  border: solid;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 5%;
-}
