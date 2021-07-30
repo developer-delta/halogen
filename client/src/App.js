@@ -115,7 +115,7 @@ function App() {
               </a>
             </div>
           </address>
-          <div class="mt-5">
+          <div className="mt-5">
             <p>Made with 🤝 by CodeDay Labs</p>
             <p className="text-base italic">
               Released under the
