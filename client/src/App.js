@@ -54,81 +54,78 @@ function App() {
           </button>
           <Button text="Sign Up" />
         </nav>
-        <main>
-          <section className="hero"></section>
-          <section className="app-info"></section>
-          <section className="lightbox w-screen h-screen justify-center items-center flex">
-            <div
-              style={{ background: color }}
-              className="lightbox-sub rounded-lg relative "
-            >
-              <div className="lightbox-circle"></div>
-              {hidden && (
-                <SketchPicker
-                  className="sketchpicker float-right"
-                  color={color}
-                  onChange={(updatedColor) => setColor(updatedColor.hex)}
-                />
-              )}
-              <button
-                onClick={() => setHidden(!hidden)}
-                className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right relative right-5 bottom-60 "
-              >
-                {hidden ? "Close color picker" : "Open color picker"}
-              </button>
-            </div>
-          </section>
-          <section className="palette"></section>
-        </main>
-        <p className="heading-font">{!data ? "Loading..." : data}</p>{" "}
-        {/* If no data message, then it will load otherwise, there is a data message */}
-        {/* <TextInput placeholder="Email address" />
-        <TextInput placeholder="Password" /> */}
-        <footer className="bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
-          <address class="flex space-x-10">
-            <div>
-              <a href="#">
-                <img
-                  className="bg-white rounded-full h-10"
-                  src="/images/twitter.png"
-                  alt="Twiiter's icon"
-                />
-              </a>
-            </div>
-            <div>
-              <a href="#">
-                <img
-                  className="bg-white rounded-full h-10"
-                  src="/images/github.png"
-                  alt="GitHub's icon"
-                />
-              </a>
-            </div>
-            <div>
-              <a href="#">
-                <img
-                  className="bg-white rounded-full h-10"
-                  src="/images/insta.png"
-                  alt="instagram's icon"
-                />
-              </a>
-            </div>
-          </address>
-          <div class="mt-5">
-            <p>Made with 🤝 by CodeDay Labs</p>
-            <p className="text-base italic">
-              Released under the
-              <a
-                href="https://en.wikipedia.org/wiki/MIT_License"
-                target="_blank"
-              >
-                {" "}
-                MIT license
-              </a>
-            </p>
-          </div>
-        </footer>
       </header>
+      <main>
+        <section className="hero"></section>
+        <section className="app-info"></section>
+        <section className="lightbox w-screen h-screen justify-center items-center flex">
+          <div
+            style={{ background: color }}
+            className="lightbox-sub rounded-lg relative "
+          >
+            <div className="lightbox-circle"></div>
+            {hidden && (
+              <SketchPicker
+                className="sketchpicker float-right"
+                color={color}
+                onChange={(updatedColor) => setColor(updatedColor.hex)}
+              />
+            )}
+            <button
+              onClick={() => setHidden(!hidden)}
+              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right relative right-5 bottom-60 "
+            >
+              {hidden ? "Close color picker" : "Open color picker"}
+            </button>
+          </div>
+        </section>
+        <section className="palette"></section>
+      </main>
+      <p className="heading-font">{!data ? "Loading..." : data}</p>{" "}
+      {/* If no data message, then it will load otherwise, there is a data message */}
+      {/* <TextInput placeholder="Email address" />
+        <TextInput placeholder="Password" /> */}
+      <footer className="bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
+        <address class="flex space-x-10">
+          <div>
+            <a href="#">
+              <img
+                className="bg-white rounded-full h-10"
+                src="/images/twitter.png"
+                alt="Twiiter's icon"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img
+                className="bg-white rounded-full h-10"
+                src="/images/github.png"
+                alt="GitHub's icon"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img
+                className="bg-white rounded-full h-10"
+                src="/images/insta.png"
+                alt="instagram's icon"
+              />
+            </a>
+          </div>
+        </address>
+        <div class="mt-5">
+          <p>Made with 🤝 by CodeDay Labs</p>
+          <p className="text-base italic">
+            Released under the
+            <a href="https://en.wikipedia.org/wiki/MIT_License" target="_blank">
+              {" "}
+              MIT license
+            </a>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
