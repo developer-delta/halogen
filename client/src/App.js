@@ -50,7 +50,9 @@ function App() {
               src="/images/hamburger-icon.png"
               alt="Hamburger's icon"
             />
-            <strong className="ml-1 float-left text-base">Menu</strong>
+            <strong className="ml-1 float-left text-base text-white">
+              Menu
+            </strong>
           </button>
           <Button text="Sign Up" />
         </nav>
