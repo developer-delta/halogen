@@ -1,14 +1,10 @@
-.App {
-  background-image: radial-gradient(circle farthest-side at top center, #434343 0%, #2F2C2C 36%);
-}
-
-footer {
-  text-align: center;
-}
-
 * {
   font-family: "Nunito Sans", sans-serif;
   color: white;
+}
+
+.App {
+  background-image: radial-gradient(circle farthest-side at top center, #434343 0%, #2F2C2C 36%);
 }
 
 main {
@@ -19,14 +15,15 @@ main {
   color: white;
 }
 
-.halogen-line {
-  height: 3px;
-}
-
 .sketchpicker {
   position: absolute;
   top: 27.4vh;
   right: 2vw;
+}
+
+.lightbox-sub {
+  width: 95%;
+  height: 95%;
 }
 
 .lightbox-circle {
@@ -37,9 +34,12 @@ main {
   margin: 40px auto;
 }
 
-.lightbox-sub {
-  width: 95%;
-  height: 95%;
+.halogen-line {
+  height: 3px;
+}
+
+footer {
+  text-align: center;
 }
 
 
