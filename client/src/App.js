@@ -45,12 +45,12 @@ function App() {
         <LinearGradient width="100px" />
         <LinearGradient width="300px" />
         <LinearGradient width="500px" />
-        <nav className="fixed w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg border-b border-gray-200">
+        <nav className="fixed w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg bg-gray-600 bg-opacity-50">
           <button className="px-7">
             <img
               className="h-6 float-left"
               src="/images/hamburger-icon.png"
-              alt="Hamburger icon image"
+              alt="Hamburger's icon"
             />
             <strong className="ml-1 float-left text-base">Menu</strong>
           </button>
