@@ -80,51 +80,54 @@ function App() {
           </div>
         </section>
         <section className="palette"></section>
-      </main>
-      <p className="heading-font">{!data ? "Loading..." : data}</p>{" "}
-      {/* If no data message, then it will load otherwise, there is a data message */}
-      {/* <TextInput placeholder="Email address" />
+      </main> 
+        <p className="heading-font">{!data ? "Loading..." : data}</p>{" "}
+        {/* If no data message, then it will load otherwise, there is a data message */}
+        {/* <TextInput placeholder="Email address" />
         <TextInput placeholder="Password" /> */}
-      <footer className="bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
-        <address class="flex space-x-10">
-          <div>
-            <a href="#">
-              <img
-                className="bg-white rounded-full h-10"
-                src="/images/twitter.png"
-                alt="Twiiter's icon"
-              />
-            </a>
+        <footer className="bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
+          <address class="flex space-x-10">
+            <div>
+              <a href="#">
+                <img
+                  className="bg-white rounded-full h-10"
+                  src="/images/twitter.png"
+                  alt="Twiiter's icon"
+                />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img
+                  className="bg-white rounded-full h-10"
+                  src="/images/github.png"
+                  alt="GitHub's icon"
+                />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img
+                  className="bg-white rounded-full h-10"
+                  src="/images/insta.png"
+                  alt="instagram's icon"
+                />
+              </a>
+            </div>
+          </address>
+          <div className="mt-5">
+            <p>Made with 🤝 by CodeDay Labs</p>
+            <p className="text-base italic">
+              Released under the
+              <a
+                href="https://en.wikipedia.org/wiki/MIT_License"
+                target="_blank"
+              >
+                {" "}
+                MIT license
+              </a>
+            </p>
           </div>
-          <div>
-            <a href="#">
-              <img
-                className="bg-white rounded-full h-10"
-                src="/images/github.png"
-                alt="GitHub's icon"
-              />
-            </a>
-          </div>
-          <div>
-            <a href="#">
-              <img
-                className="bg-white rounded-full h-10"
-                src="/images/insta.png"
-                alt="instagram's icon"
-              />
-            </a>
-          </div>
-        </address>
-        <div class="mt-5">
-          <p>Made with 🤝 by CodeDay Labs</p>
-          <p className="text-base italic">
-            Released under the
-            <a href="https://en.wikipedia.org/wiki/MIT_License" target="_blank">
-              {" "}
-              MIT license
-            </a>
-          </p>
-        </div>
       </footer>
     </div>
   );
