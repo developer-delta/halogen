@@ -1,6 +1,10 @@
 .App {
   text-align: center;
-  background-image: radial-gradient(circle farthest-side at top center, #434343 0%, #2F2C2C 36%);
+  background-image: radial-gradient(
+    circle farthest-side at top center,
+    #434343 0%,
+    #2f2c2c 36%
+  );
 }
 
 .App-logo {
@@ -20,7 +24,6 @@
 .App-header {
   /*background-color: #a50eb3;*/
   /* background: linear-gradient(#e66465, #9198e5); */
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
@@ -44,16 +47,15 @@
 
 .sketchpicker {
   position: absolute;
-  top: 27.4vh;
-  right: 2vw;
+  bottom: 13.7vh;
+  right: 1vw;
 }
 
 .lightbox-circle {
-  border: 6.3vw solid #fff;
-  height: 90.5%;
-  width: 51.56%;
+  border: 5.63rem solid #fff;
+  height: 44.063rem;
+  width: 44.063rem;
   border-radius: 50%;
-  margin: 40px auto;
 }
 
 /*@keyframes App-logo-spin {
