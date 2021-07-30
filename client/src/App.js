@@ -20,7 +20,7 @@ function App() {
      to equal the color state, and the current initial is #47C4AF. To change color is to use setColor by using change event. */
   const [color, setColor] = React.useState("#47C4AF");
   /* Hidden is for a button to close the color picker, so there is a ternary operator or condition for it. Initially, it is 
-     false, so setHidden is to toggle based on the false or true. */
+     false, so setHidden is to toggle based on the false or true condition. */
   const [hidden, setHidden] = React.useState("false");
 
   //Fetch API allows for asyncronous http requests and returns a promise.
@@ -45,7 +45,15 @@ function App() {
         <LinearGradient width="100px" />
         <LinearGradient width="300px" />
         <LinearGradient width="500px" />
-        <nav className="nav-bar">
+        <nav className="fixed w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg bg-gray-600 bg-opacity-50">
+          <button className="px-7">
+            <img
+              className="h-6 float-left"
+              src="/images/hamburger-icon.png"
+              alt="Hamburger's icon"
+            />
+            <strong className="ml-1 float-left text-base">Menu</strong>
+          </button>
           <Button text="Sign Up" />
         </nav>
         <section className="hero"></section>
