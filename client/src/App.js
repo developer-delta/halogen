@@ -43,7 +43,7 @@ function App() {
         {/* <LinearGradient width="100px" />
         <LinearGradient width="300px" />
         <LinearGradient width="500px" /> */}
-        <nav className="fixed w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg bg-gray-600 bg-opacity-50">
+        <nav className="w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg bg-gray-600 bg-opacity-50">
           <button className="px-7">
             <img
               className="h-6 float-left"
@@ -56,7 +56,11 @@ function App() {
         </nav>
       </header>
       <main>
-        <section className="hero"></section>
+        <section className="hero">
+          <div className="container h-screen">
+            {/*<p className="heading-font">{!data ? "Loading..." : data}</p>{" "}*/}
+          </div>
+         </section>
         <section className="app-info"></section>
         <section className="lightbox w-screen h-screen justify-center items-center flex">
           <div
@@ -81,7 +85,6 @@ function App() {
         </section>
         <section className="palette"></section>
       </main> 
-        <p className="heading-font">{!data ? "Loading..." : data}</p>{" "}
         {/* If no data message, then it will load otherwise, there is a data message */}
         {/* <TextInput placeholder="Email address" />
         <TextInput placeholder="Password" /> */}
