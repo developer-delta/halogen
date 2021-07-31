@@ -50,7 +50,9 @@ function App() {
               src="/images/hamburger-icon.png"
               alt="Hamburger's icon"
             />
-            <strong className="ml-1 float-left text-base">Menu</strong>
+            <strong className="ml-1 float-left text-base text-white">
+              Menu
+            </strong>
           </button>
           <Button text="Sign Up" />
         </nav>
@@ -61,7 +63,7 @@ function App() {
         <section className="lightbox w-screen h-screen justify-center items-center flex">
           <div
             style={{ background: color }}
-            className="lightbox-sub rounded-lg relative "
+            className="lightbox-sub rounded-lg relative overflow-auto justify-center items-center flex"
           >
             <div className="lightbox-circle"></div>
             {hidden && (
@@ -73,61 +75,58 @@ function App() {
             )}
             <button
               onClick={() => setHidden(!hidden)}
-              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right relative right-5 bottom-60 "
+              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right absolute right-10 bottom-20"
             >
               {hidden ? "Close color picker" : "Open color picker"}
             </button>
           </div>
         </section>
         <section className="palette"></section>
-      </main> 
-        <p className="heading-font">{!data ? "Loading..." : data}</p>{" "}
-        {/* If no data message, then it will load otherwise, there is a data message */}
-        {/* <TextInput placeholder="Email address" />
+      </main>
+      <p className="heading-font">{!data ? "Loading..." : data}</p>{" "}
+      {/* If no data message, then it will load otherwise, there is a data message */}
+      {/* <TextInput placeholder="Email address" />
         <TextInput placeholder="Password" /> */}
-        <footer className="bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
-          <address class="flex space-x-10">
-            <div>
-              <a href="#">
-                <img
-                  className="bg-white rounded-full h-10"
-                  src="/images/twitter.png"
-                  alt="Twiiter's icon"
-                />
-              </a>
-            </div>
-            <div>
-              <a href="#">
-                <img
-                  className="bg-white rounded-full h-10"
-                  src="/images/github.png"
-                  alt="GitHub's icon"
-                />
-              </a>
-            </div>
-            <div>
-              <a href="#">
-                <img
-                  className="bg-white rounded-full h-10"
-                  src="/images/insta.png"
-                  alt="instagram's icon"
-                />
-              </a>
-            </div>
-          </address>
-          <div className="mt-5">
-            <p>Made with 🤝 by CodeDay Labs</p>
-            <p className="text-base italic">
-              Released under the
-              <a
-                href="https://en.wikipedia.org/wiki/MIT_License"
-                target="_blank"
-              >
-                {" "}
-                MIT license
-              </a>
-            </p>
+      <footer className="bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
+        <address class="flex space-x-10">
+          <div>
+            <a href="#">
+              <img
+                className="bg-white rounded-full h-10"
+                src="/images/twitter.png"
+                alt="Twiiter's icon"
+              />
+            </a>
           </div>
+          <div>
+            <a href="#">
+              <img
+                className="bg-white rounded-full h-10"
+                src="/images/github.png"
+                alt="GitHub's icon"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img
+                className="bg-white rounded-full h-10"
+                src="/images/insta.png"
+                alt="instagram's icon"
+              />
+            </a>
+          </div>
+        </address>
+        <div className="mt-5">
+          <p>Made with 🤝 by CodeDay Labs</p>
+          <p className="text-base italic">
+            Released under the
+            <a href="https://en.wikipedia.org/wiki/MIT_License" target="_blank">
+              {" "}
+              MIT license
+            </a>
+          </p>
+        </div>
       </footer>
     </div>
   );
