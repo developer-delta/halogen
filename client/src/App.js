@@ -52,7 +52,7 @@ function App() {
             />
             <strong className="ml-1 float-left text-base">Menu</strong>
           </button>
-          <Button text="Sign Up" />
+          <Button text="Sign up" />
         </nav>
       </header>
       <main>
