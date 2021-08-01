@@ -1,43 +1,24 @@
-.App {
-  text-align: center;
-  background-image: radial-gradient(
-    circle farthest-side at top center,
-    #434343 0%,
-    #2f2c2c 36%
-  );
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-.heading-font {
+* {
   font-family: "Nunito Sans", sans-serif;
+  color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App {
+  background-image: radial-gradient(circle farthest-side at top center, #434343 0%, #2F2C2C 36%);
 }
 
-.App-header {
-  /*background-color: #a50eb3;*/
-  /* background: linear-gradient(#e66465, #9198e5); */
+main {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.halogen-line {
-  height: 3px;
-}
-
-.App-link {
-  color: #1f657a;
+.sketchpicker {
+  position: absolute;
+  top: 27.4vh;
+  right: 2vw;
 }
 
 .lightbox-sub {
@@ -58,11 +39,10 @@
   border-radius: 50%;
 }
 
-/*@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}*/
+.halogen-line {
+  height: 3px;
+}
+
+footer {
+  text-align: center;
+}
