@@ -43,7 +43,7 @@ function App() {
         {/* <LinearGradient width="100px" />
         <LinearGradient width="300px" />
         <LinearGradient width="500px" /> */}
-        <nav className="w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg bg-gray-600 bg-opacity-50">
+        <nav className="fixed w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg bg-gray-600 bg-opacity-50">
           <button className="px-7">
             <img
               className="h-6 float-left"
