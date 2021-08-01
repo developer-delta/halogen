@@ -80,7 +80,7 @@ function App() {
         <footer className="bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
           <address class="flex space-x-10">
             <div>
-              <a href="https://github.com/developer-delta/halogen">
+              <a href="https://twitter.com/?lang=en">
                 <img
                   className="bg-white rounded-full h-10"
                   src="/images/twitter.png"
@@ -89,7 +89,7 @@ function App() {
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="https://github.com/">
                 <img
                   className="bg-white rounded-full h-10"
                   src="/images/github.png"
@@ -98,7 +98,7 @@ function App() {
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="https://www.instagram.com/">
                 <img
                   className="bg-white rounded-full h-10"
                   src="/images/insta.png"
@@ -112,7 +112,7 @@ function App() {
             <p className="text-base italic">
               Released under the
               <a
-                href="https://en.wikipedia.org/wiki/MIT_License"
+                href="https://en.wikipedia.org/wiki/MIT_License" rel="noreferrer"
                 target="_blank"
               >
                 {" "}
