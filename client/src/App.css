@@ -26,12 +26,17 @@ main {
   height: 95%;
 }
 
+.sketchpicker {
+  position: absolute;
+  bottom: 13.7vh;
+  right: 1vw;
+}
+
 .lightbox-circle {
-  border: 6.3vw solid #fff;
-  height: 90.5%;
-  width: 51.56%;
+  border: 5.63rem solid #fff;
+  height: 44.063rem;
+  width: 44.063rem;
   border-radius: 50%;
-  margin: 40px auto;
 }
 
 .halogen-line {
@@ -41,5 +46,3 @@ main {
 footer {
   text-align: center;
 }
-
-
