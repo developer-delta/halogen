@@ -88,7 +88,7 @@ function App() {
       {/* <TextInput placeholder="Email address" />
         <TextInput placeholder="Password" /> */}
       <footer className="bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
-        <address class="flex space-x-10">
+        <address className="flex space-x-10">
           <div>
             <a href="https://twitter.com/?lang=en">
               <img
