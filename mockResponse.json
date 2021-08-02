@@ -1,7 +1,38 @@
 {
     "name": "Rohini",
-    "colors": [
+    "email": "roh3290a@gmail.com",
+    "password": "HalogenIsTheBest2021",
+    "new-user": "true",
+    "outer-ring-colors": [
         {"hex": "#E20074"}, 
-        {"hex": "#FFFF"}
-    ]
+        {"hex": "#FFFF"},
+        {"hex": "#40E0D0"}
+    ],
+    "ring-color": [
+        {"hex": "#FFFFFF"},
+        {"hex": "#E67687"},
+        {"hex": "#ebdaf2"}
+    ],
+    "inner-ring-color": [
+        {"hex": "#40E0D0"},
+        {"hex": "#71c78a"},
+        {"hex": "#a1a1a1"}
+    ],
+    "ring-name": [
+        {"name": "Office Morning"},
+        {"name": "Overhead Light"},
+        {"name": "Afternoon"}
+
+    ],
+    "innter-ring-gradient": [
+        {"option": "yes"},
+        {"option": "no"},
+        {"option": "no"}
+    ],
+    "favorite-ring-order": [
+        {"ring": "3"},
+        {"ring": "1"},
+        {"ring": "2"}
+    ] 
+
 }
