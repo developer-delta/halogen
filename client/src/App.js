@@ -54,11 +54,15 @@ function App() {
               Menu
             </strong>
           </button>
-          <Button text="Sign Up" />
+          <Button text="Sign up" />
         </nav>
       </header>
       <main>
-        <section className="hero"></section>
+        <section className="hero">
+          <div className="container h-screen">
+            {/*<p className="heading-font">{!data ? "Loading..." : data}</p>{" "}*/}
+          </div>
+         </section>
         <section className="app-info"></section>
         <section className="lightbox w-screen h-screen justify-center items-center flex">
           <div
@@ -82,10 +86,9 @@ function App() {
           </div>
         </section>
         <section className="palette"></section>
-      </main>
-      <p className="heading-font">{!data ? "Loading..." : data}</p>{" "}
-      {/* If no data message, then it will load otherwise, there is a data message */}
-      {/* <TextInput placeholder="Email address" />
+      </main> 
+        {/* If no data message, then it will load otherwise, there is a data message */}
+        {/* <TextInput placeholder="Email address" />
         <TextInput placeholder="Password" /> */}
       <footer className="bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
         <address className="flex space-x-10">
