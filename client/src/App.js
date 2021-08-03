@@ -64,10 +64,10 @@ function App() {
           </div>
          </section>
         <section className="app-info"></section>
-        <section className="lightbox w-screen h-screen justify-center items-center flex">
+        <section className="lightbox w-full h-screen justify-center items-center flex">
           <div
             style={{ background: color }}
-            className="lightbox-sub rounded-lg relative overflow-auto justify-center items-center flex"
+            className="lightbox-sub rounded-lg relative w-full justify-center items-center flex"
           >
             <div className="lightbox-circle"></div>
             {hidden && (
