@@ -2,7 +2,7 @@ import React from "react";
 import Modal from "react-modal";
 import LoginSignUp from "./LoginSignUp";
 
-Modal.setAppElement("#root"); //To remove error/warning in console for accesibility reasons
+Modal.setAppElement("#root"); //To remove error/warning in console for accessibility reasons
 function Button(props) {
   /* Boolean values  are used to open and close modal. Initial value is false meaning that modal is closed by default. 
    onClick attribute will be used for a button to open modal on click. Once clicked, the boolean value is set as true */
