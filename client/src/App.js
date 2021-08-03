@@ -4,8 +4,8 @@
 import React from "react";
 import "./App.css"; //Importing the styles from the App.css file. The typical syntax is not used but the address of the CSS file.
 import Button from "./Button";
-// import LinearGradient from "./LinearGradient";
-// import TextInput from "./TextInput";
+import LinearGradient from "./LinearGradient";
+import TextInput from "./TextInput";
 import { SketchPicker } from "react-color";
 
 //A functional component is the JavaScript function. App is the name of the function.
@@ -40,9 +40,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <LinearGradient width="100px" />
-        <LinearGradient width="300px" />
-        <LinearGradient width="500px" /> */}
+        <LinearGradient width="100px" />
+        <LinearGradient height="300px" />
         <nav className="fixed w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg bg-gray-600 bg-opacity-50">
           <button className="px-7">
             <img
