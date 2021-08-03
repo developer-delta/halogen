@@ -4,7 +4,11 @@
 }
 
 .App {
-  background-image: radial-gradient(circle farthest-side at top center, #434343 0%, #2F2C2C 36%);
+  background-image: radial-gradient(
+    circle farthest-side at top center,
+    #434343 0%,
+    #2f2c2c 36%
+  );
 }
 
 main {
@@ -15,12 +19,6 @@ main {
   color: white;
   margin: auto;
   max-width: 1280px;
-}
-
-.sketchpicker {
-  position: absolute;
-  top: 27.4vh;
-  right: 2vw;
 }
 
 .lightbox-sub {
@@ -43,6 +41,13 @@ main {
 .halogen-line {
   height: 3px;
   width: 3px;
+}
+
+.input-button:hover {
+  border: solid 2px transparent;
+  background-image: linear-gradient(101deg, #78e4ff, #ff48fa);
+  background-origin: border-box;
+  box-shadow: 2px 1000px 1px rgb(223, 219, 219) inset;
 }
 
 footer {
