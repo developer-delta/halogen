@@ -3,9 +3,9 @@
  have react added as a dependency in our package.json, there will be nothing to import. */
 import React from "react";
 import "./App.css"; //Importing the styles from the App.css file. The typical syntax is not used but the address of the CSS file.
-import Button from "./Button";
 // import LinearGradient from "./LinearGradient";
 import { SketchPicker } from "react-color";
+import Modals from "./Modals";
 
 //A functional component is the JavaScript function. App is the name of the function.
 function App() {
@@ -52,7 +52,7 @@ function App() {
               Menu
             </strong>
           </button>
-          <Button text="Sign up" />
+          <Modals />
         </nav>
       </header>
       <main>
