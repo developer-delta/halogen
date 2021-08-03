@@ -20,7 +20,7 @@ function Button(props) {
       <Modal
         className="m-auto w-max mt-20 text-black"
         isOpen={modalIsOpen} //To open this modal based on a state variable that is set on button click
-        onRequestClose={closeModal} //Either clicking on overlay or pressing ESC
+        onRequestClose={closeModal} //Either clicking on overlay or pressing ESC to close this modal
         style={{
           //Modal's style prop
           overlay: {
