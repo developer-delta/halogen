@@ -85,7 +85,7 @@ function App() {
         </section>
         <section className="palette"></section>
       </main>
-      <footer className="bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
+      <footer className="w-full bottom-0 items-center flex flex-full flex-col py-20">
         <address className="flex space-x-10">
           <div>
             <a href="https://twitter.com/?lang=en">
