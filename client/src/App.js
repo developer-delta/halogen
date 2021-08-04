@@ -40,8 +40,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <LinearGradient width="100px" />
-        <LinearGradient height="300px" />
+        {/*<LinearGradient width="100px" />
+        <LinearGradient height="300px" />*/}
         <nav className="fixed w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg bg-gray-600 bg-opacity-50">
           <button className="px-7">
             <img
@@ -62,7 +62,27 @@ function App() {
             {/*<p className="heading-font">{!data ? "Loading..." : data}</p>{" "}*/}
           </div>
          </section>
-        <section className="app-info"></section>
+        <section className="app-info">
+          <div className="halogen-line justify-items-center place-items-center">
+          <LinearGradient height="500px" />
+          </div>
+          <div>
+            <img 
+              className="left-0 top-0"
+              src="https://user-images.githubusercontent.com/13723156/127782437-7f221d77-d4d9-4371-ad6d-ede848f03248.png" 
+              width="721" 
+              height="481"
+            />
+          </div>
+          <div>
+          <img 
+              className="bottom-0 right-0"
+              src="https://user-images.githubusercontent.com/13723156/127782433-d937e0b7-4efe-4c09-b552-803bf6188b3e.png" 
+              width="721" 
+              height="481"
+            />
+          </div>
+        </section>
         <section className="lightbox w-screen h-screen justify-center items-center flex">
           <div
             style={{ background: color }}
