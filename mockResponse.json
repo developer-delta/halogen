@@ -2,37 +2,30 @@
     "name": "Rohini",
     "email": "roh3290a@gmail.com",
     "password": "HalogenIsTheBest2021",
-    "new-user": "true",
-    "outer-ring-colors": [
-        {"hex": "#E20074"}, 
-        {"hex": "#FFFF"},
-        {"hex": "#40E0D0"}
-    ],
-    "ring-color": [
-        {"hex": "#FFFFFF"},
-        {"hex": "#E67687"},
-        {"hex": "#ebdaf2"}
-    ],
-    "inner-ring-color": [
-        {"hex": "#40E0D0"},
-        {"hex": "#71c78a"},
-        {"hex": "#a1a1a1"}
-    ],
-    "ring-name": [
-        {"name": "Office Morning"},
-        {"name": "Overhead Light"},
-        {"name": "Afternoon"}
-
-    ],
-    "innter-ring-gradient": [
-        {"option": "yes"},
-        {"option": "no"},
-        {"option": "no"}
-    ],
-    "favorite-ring-order": [
-        {"ring": "3"},
-        {"ring": "1"},
-        {"ring": "2"}
-    ] 
-
+    "palettes": [
+        {
+            "outerRingColor": "#E20074",
+            "innerRingColor": "#40E0D0",
+            "ringColor": "#FFFFFF",
+            "ringName": "Office Morning",
+            "innerRingGradient": true,
+            "favoriteRingOrder": "3"
+        },
+        {
+            "outerRingColor": "#FFFFFF",
+            "innerRingColor": "#71c78a",
+            "ringColor": "#E67687",
+            "ringName": "Overhead Light",
+            "innerRingGradient": false,
+            "favoriteRingOrder": "1"
+        },
+        {
+            "outerRingColor": "#40E0D0",
+            "innerRingColor": "#a1a1a1",
+            "ringColor": "#ebdaf2",
+            "ringName": "Afternoon",
+            "innerRingGradient": false,
+            "favoriteRingOrder": "2"
+        }
+    ]
 }
