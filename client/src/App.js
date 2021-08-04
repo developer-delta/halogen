@@ -3,10 +3,9 @@
  have react added as a dependency in our package.json, there will be nothing to import. */
 import React from "react";
 import "./App.css"; //Importing the styles from the App.css file. The typical syntax is not used but the address of the CSS file.
-import Button from "./Button";
-import LinearGradient from "./LinearGradient";
-import TextInput from "./TextInput";
+// import LinearGradient from "./LinearGradient";
 import { SketchPicker } from "react-color";
+import Modals from "./Modals";
 
 //A functional component is the JavaScript function. App is the name of the function.
 function App() {
@@ -21,7 +20,7 @@ function App() {
   const [color, setColor] = React.useState("#47C4AF");
   /* Hidden is for a button to close the color picker, so there is a ternary operator or condition for it. Initially, it is 
      false, so setHidden is to toggle based on the false or true condition. */
-  const [hidden, setHidden] = React.useState("false");
+  const [hidden, setHidden] = React.useState(false);
 
   //Fetch API allows for asyncronous http requests and returns a promise.
   /* useEffect hook is a named export from the React library. It is explained as that the effect happens after render (whenever
@@ -40,8 +39,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <LinearGradient width="100px" />
-        <LinearGradient height="300px" />
+        {/* <LinearGradient width="100px" />
+        <LinearGradient height="300px" /> */}
         <nav className="fixed w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg bg-gray-600 bg-opacity-50">
           <button className="px-7">
             <img
@@ -53,15 +52,15 @@ function App() {
               Menu
             </strong>
           </button>
-          <Button text="Sign up" />
+          <Modals />
         </nav>
       </header>
       <main>
         <section className="hero">
-          <div className="container h-screen">
+          <div className="container">
             {/*<p className="heading-font">{!data ? "Loading..." : data}</p>{" "}*/}
           </div>
-         </section>
+        </section>
         <section className="app-info"></section>
         <section className="lightbox w-full h-screen justify-center items-center flex">
           <div
@@ -85,10 +84,7 @@ function App() {
           </div>
         </section>
         <section className="palette"></section>
-      </main> 
-        {/* If no data message, then it will load otherwise, there is a data message */}
-        {/* <TextInput placeholder="Email address" />
-        <TextInput placeholder="Password" /> */}
+      </main>
       <footer className="bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
         <address className="flex space-x-10">
           <div>
@@ -123,7 +119,11 @@ function App() {
           <p>Made with 🤝 by CodeDay Labs</p>
           <p className="text-base italic">
             Released under the
-            <a href="https://en.wikipedia.org/wiki/MIT_License" target="_blank" rel="noreferrer">
+            <a
+              href="https://en.wikipedia.org/wiki/MIT_License"
+              target="_blank"
+              rel="noreferrer"
+            >
               {" "}
               MIT license
             </a>
