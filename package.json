@@ -29,6 +29,7 @@
     "mongodb": "^4.0.0",
     "mongoose": "^5.13.5",
     "nodemon": "^2.0.12",
-    "react-color": "^2.19.3"
+    "react-color": "^2.19.3",
+    "react-modal": "^3.14.3"
   }
 }
