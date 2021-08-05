@@ -62,26 +62,28 @@ function App() {
             {/*<p className="heading-font">{!data ? "Loading..." : data}</p>{" "}*/}
           </div>
          </section>
-        <section className="app-info">
+        <section className="app-info w-screen h-screen">
           <div className="halogen-line justify-items-center place-items-center">
           <LinearGradient height="500px" />
           </div>
-          <div>
-            <img 
-              className="left-0 top-0"
-              src="https://user-images.githubusercontent.com/13723156/127782437-7f221d77-d4d9-4371-ad6d-ede848f03248.png" 
-              width="721" 
-              height="481"
-            />
+          <div className="flex h-1/2">
+             <img 
+              className="h-full w-4/12 p-8"
+              src="https://user-images.githubusercontent.com/13723156/127782437-7f221d77-d4d9-4371-ad6d-ede848f03248.png" alt="" />
+             <div class="flex flex-col justify-center text-left w-1/2 p-8">
+                <h2 className="text-5xl leading-relaxed">Halogen works on any screen to create the perfect lighting setup</h2>
+                <p className="leading-snug">Use the screens you have to create better lighting in your video calls. Halogen on your phone, ipad, or second monitor can make all the differnce when your video is on.</p>
+             </div>
           </div>
-          <div>
-          <img 
-              className="bottom-0 right-0"
-              src="https://user-images.githubusercontent.com/13723156/127782433-d937e0b7-4efe-4c09-b552-803bf6188b3e.png" 
-              width="721" 
-              height="481"
-            />
-          </div>
+          <div className="flex h-1/2">
+            <div class="flex flex-col justify-center text-right w-1/2 p-8">
+              <h2 className="text-5xl leading-relaxed">Easily sync your lightbox palettes together.</h2>
+              <p className="leading-snug">Auto sync your devices to reflect changes on all your lightboxes. Or if you prefer you can configure each one individually.</p>
+            </div>
+           <img 
+              className="h-full w-4/12 p-8"
+              src="https://user-images.githubusercontent.com/13723156/127782433-d937e0b7-4efe-4c09-b552-803bf6188b3e.png" alt=""/>
+         </div>
         </section>
         <section className="lightbox w-screen h-screen justify-center items-center flex">
           <div
