@@ -62,12 +62,14 @@ function App() {
             {/*<p className="heading-font">{!data ? "Loading..." : data}</p>{" "}*/}
           </div>
          </section>
-        <section className="app-info w-screen h-screen p-8">
-          <div className="halogen-line justify-items-center place-items-center">
-          <LinearGradient height="500px" />
+        <section className="app-info w-screen h-screen p-8 relative">
+          <div className="halogen-line absolute bottom-0 left-0">
+            <div className="absolute bottom-10 left-96">
+               <LinearGradient height="500px" />
+            </div>
           </div>
           <div className="flex h-1/2 w-full">
-               <div className="w-1/2 object-center">
+               <div className="w-1/2 flex justify-center">
                  <img 
                  className="h-full p-8"
                  src="https://user-images.githubusercontent.com/13723156/127782437-7f221d77-d4d9-4371-ad6d-ede848f03248.png" alt="" /> 
@@ -82,7 +84,7 @@ function App() {
               <h2 className="text-5xl leading-relaxed">Easily sync your lightbox palettes together.</h2>
               <p className="leading-snug">Auto sync your devices to reflect changes on all your lightboxes. Or if you prefer you can configure each one individually.</p>
             </div>
-           <div className="w-1/2 object-center">
+           <div className="w-1/2 flex justify-center">
              <img 
               className="h-full p-8"
               src="https://user-images.githubusercontent.com/13723156/127782433-d937e0b7-4efe-4c09-b552-803bf6188b3e.png" alt=""/>
