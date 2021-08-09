@@ -37,6 +37,13 @@ main {
   border-radius: 50%;
 }
 
+.palette-circle {
+  border: 1rem solid #fff;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+}
+
 .halogen-line {
   height: 3px;
   width: 3px;

@@ -6,6 +6,7 @@ import "./App.css"; //Importing the styles from the App.css file. The typical sy
 // import LinearGradient from "./LinearGradient";
 import { SketchPicker } from "react-color";
 import Modals from "./Modals";
+import Palette from "./Palette";
 
 //A functional component is the JavaScript function. App is the name of the function.
 function App() {
@@ -62,10 +63,10 @@ function App() {
           </div>
         </section>
         <section className="app-info"></section>
-        <section className="lightbox w-full h-screen justify-center items-center flex">
+        <section className="lightbox w-full justify-center items-center flex">
           <div
             style={{ background: color }}
-            className="lightbox-sub rounded-lg relative w-full justify-center items-center flex"
+            className="lightbox-sub rounded-lg relative w-full justify-center items-center flex pt-5 pb-5"
           >
             <div className="lightbox-circle"></div>
             {hidden && (
@@ -83,7 +84,9 @@ function App() {
             </button>
           </div>
         </section>
-        <section className="palette"></section>
+        <section className="palette">
+          <Palette />
+        </section>
       </main>
       <footer className="w-full bottom-0 items-center flex flex-full flex-col py-20">
         <address className="flex space-x-10">
