@@ -21,6 +21,7 @@ function App() {
   /* Hidden is for a button to close the color picker, so there is a ternary operator or condition for it. Initially, it is 
      false, so setHidden is to toggle based on the false or true condition. */
   const [hidden, setHidden] = React.useState(false);
+  const [paletteItems, setPaletteItems] = React.useState();
 
   //Fetch API allows for asyncronous http requests and returns a promise.
   /* useEffect hook is a named export from the React library. It is explained as that the effect happens after render (whenever
@@ -30,6 +31,14 @@ function App() {
       //.then() function returns a promise (promise is like a placeholder for a value).
       .then((res) => res.json()) //Return a promise that results in parsing the body as JSON.
       .then((data) => setData(data.message)); //We call setData to update data message
+  }, []);
+
+  React.useEffect(() => {
+    fetch(`/profiles`)
+      .then((res) => res.json())
+      .then((data) => {
+        setPaletteItems(data.palettes);
+      });
   }, []);
 
   /* JSX is a templating language for React. It looks like a lot of HTML used for React. Currently, the codes show the curly
@@ -62,10 +71,10 @@ function App() {
           </div>
         </section>
         <section className="app-info"></section>
-        <section className="lightbox w-full h-screen justify-center items-center flex">
+        <section className="lightbox w-full justify-center items-center flex">
           <div
             style={{ background: color }}
-            className="lightbox-sub rounded-lg relative w-full justify-center items-center flex"
+            className="lightbox-sub rounded-lg relative w-full pt-5 pb-5 justify-center items-center flex"
           >
             <div className="lightbox-circle"></div>
             {hidden && (
@@ -83,7 +92,23 @@ function App() {
             </button>
           </div>
         </section>
-        <section className="palette"></section>
+        <section className="palette">
+          <div className="flex">
+            {paletteItems &&
+              paletteItems.map((palettes, index) => (
+                <div className="relative m-3" key={index}>
+                  <div className=" flex justify-center items-center">
+                    <div className="palette-circle absolute top-0 mt-10"></div>
+                    <p className="absolute bottom-0">{palettes.ringName}</p>
+                  </div>
+                  <div
+                    className="w-52 h-52 rounded-2xl"
+                    style={{ background: palettes.outerRingColor }}
+                  ></div>
+                </div>
+              ))}
+          </div>
+        </section>
       </main>
       <footer className="w-full bottom-0 items-center flex flex-full flex-col py-20">
         <address className="flex space-x-10">
