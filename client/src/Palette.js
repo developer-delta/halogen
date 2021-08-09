@@ -14,8 +14,9 @@ function Palette(props) {
   return (
     <div className="flex">
       {paletteItems &&
-        paletteItems.map((palettes, index) => (
-          <div className="relative m-3" key={index}>
+        paletteItems.map((palettes) => (
+          // TODO: - Add key with ID after having real DB connection
+          <div className="relative m-3">
             <div className=" flex justify-center items-center">
               <div className="palette-circle absolute top-0 mt-10"></div>
               <p className="absolute bottom-0 opacity-0 hover:opacity-100 bg-gray-500 w-full text-center p-2 rounded-b-2xl">
