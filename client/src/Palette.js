@@ -1,6 +1,6 @@
 import React from "react";
 
-function Palette(props) {
+function Palette() {
   const [paletteItems, setPaletteItems] = React.useState();
 
   React.useEffect(() => {
