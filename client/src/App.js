@@ -8,7 +8,7 @@ import { SketchPicker } from "react-color";
 import Modals from "./Modals";
 import Button from "./Button";
 import LinearGradient from "./LinearGradient";
-
+import Palette from "./Palette";
 
 //A functional component is the JavaScript function. App is the name of the function.
 function App() {
@@ -61,40 +61,47 @@ function App() {
       <main>
         <section className="hero my-44 flex flex-row px-10 w- auto h-auto pb-44">
           <div className="container w-1/2 flex flex-col text-start justify-start items-start">
-            <img
-            alt="halogen"
-             className="w-3/4"
-             src="/images/title.png"/>
-            <p className="pt-7 mb-8 text-4xl leading-10">Instantly improve lighting in your video calls with halogen, a web-based lighting kit for all devices</p>
+            <img alt="halogen" className="w-3/4" src="/images/title.png" />
+            <p className="pt-7 mb-8 text-4xl leading-10">
+              Instantly improve lighting in your video calls with halogen, a
+              web-based lighting kit for all devices
+            </p>
             <div className="flex flex-col justify-start">
               <LinearGradient width="400px" height="4px"></LinearGradient>
               {/* could not apply margins to the components so had to create an empty p tag */}
               <p className="mb-8"></p>
-              <Button width="135px" height="45px" fontSize="17px" text="Get Started"></Button>
+              <Button
+                width="135px"
+                height="45px"
+                fontSize="17px"
+                text="Get Started"
+              ></Button>
             </div>
           </div>
           <div className="three-images w-1/2 flex flex-row flex-col items-center relative">
-              <img
-                alt="Women uses halogen during her meetings"
-                className="w-96" 
-                src = "/images/heroSectionPerson.png"/>
-              <img 
+            <img
+              alt="Women uses halogen during her meetings"
+              className="w-96"
+              src="/images/heroSectionPerson.png"
+            />
+            <img
               alt="halogen can also be used on laptops and computers"
               className="absolute w-72 left-4 top-44"
-              src = "/images/laptopRingLight.png"/>
-              <img 
-                alt="halogen can be used on mobiles"
-                className="absolute w-28 right-16 top-44"
-                src = "/images/mobileRingLight.png"/>
-              
-            </div>
+              src="/images/laptopRingLight.png"
+            />
+            <img
+              alt="halogen can be used on mobiles"
+              className="absolute w-28 right-16 top-44"
+              src="/images/mobileRingLight.png"
+            />
+          </div>
         </section>
 
         <section className="app-info"></section>
-        <section className="lightbox w-full h-screen justify-center items-center flex">
+        <section className="lightbox w-full justify-center items-center flex">
           <div
             style={{ background: color }}
-            className="lightbox-sub rounded-lg relative w-full justify-center items-center flex"
+            className="lightbox-sub rounded-lg relative w-full justify-center items-center flex pt-5 pb-5"
           >
             <div className="lightbox-circle"></div>
             {hidden && (
@@ -112,7 +119,9 @@ function App() {
             </button>
           </div>
         </section>
-        <section className="palette"></section>
+        <section className="palette">
+          <Palette />
+        </section>
       </main>
       <footer className="w-full bottom-0 items-center flex flex-full flex-col py-20">
         <address className="flex space-x-10">
