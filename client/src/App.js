@@ -3,10 +3,12 @@
  have react added as a dependency in our package.json, there will be nothing to import. */
 import React from "react";
 import "./App.css"; //Importing the styles from the App.css file. The typical syntax is not used but the address of the CSS file.
+// import LinearGradient from "./LinearGradient";
+import { SketchPicker } from "react-color";
+import Modals from "./Modals";
 import Button from "./Button";
 import LinearGradient from "./LinearGradient";
-import TextInput from "./TextInput";
-import { SketchPicker } from "react-color";
+import Palette from "./Palette";
 
 //A functional component is the JavaScript function. App is the name of the function.
 function App() {
@@ -21,7 +23,7 @@ function App() {
   const [color, setColor] = React.useState("#47C4AF");
   /* Hidden is for a button to close the color picker, so there is a ternary operator or condition for it. Initially, it is 
      false, so setHidden is to toggle based on the false or true condition. */
-  const [hidden, setHidden] = React.useState("false");
+  const [hidden, setHidden] = React.useState(false);
 
   //Fetch API allows for asyncronous http requests and returns a promise.
   /* useEffect hook is a named export from the React library. It is explained as that the effect happens after render (whenever
@@ -40,6 +42,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        sect-cont
         {/*<LinearGradient width="100px" />
         <LinearGradient height="300px" />*/}
         <nav className="fixed w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg bg-gray-600 bg-opacity-50">
@@ -53,14 +56,47 @@ function App() {
               Menu
             </strong>
           </button>
-          <Button text="Sign up" />
+          <Modals />
         </nav>
       </header>
       <main>
-        <section className="hero">
-          <div className="container h-screen">
-            {/*<p className="heading-font">{!data ? "Loading..." : data}</p>{" "}*/}
+        <section className="hero my-44 flex flex-row px-10 w- auto h-auto pb-44">
+          <div className="container w-1/2 flex flex-col text-start justify-start items-start">
+            <img alt="halogen" className="w-3/4" src="/images/title.png" />
+            <p className="pt-7 mb-8 text-4xl leading-10">
+              Instantly improve lighting in your video calls with halogen, a
+              web-based lighting kit for all devices
+            </p>
+            <div className="flex flex-col justify-start">
+              <LinearGradient width="400px" height="4px"></LinearGradient>
+              {/* could not apply margins to the components so had to create an empty p tag */}
+              <p className="mb-8"></p>
+              <Button
+                width="135px"
+                height="45px"
+                fontSize="17px"
+                text="Get Started"
+              ></Button>
+            </div>
           </div>
+        <div className="three-images w-1/2 flex flex-row flex-col items-center relative">
+            <img
+              alt="Women uses halogen during her meetings"
+              className="w-96"
+              src="/images/heroSectionPerson.png"
+            />
+            <img
+              alt="halogen can also be used on laptops and computers"
+              className="absolute w-72 left-4 top-44"
+              src="/images/laptopRingLight.png"
+            />
+            <img
+              alt="halogen can be used on mobiles"
+              className="absolute w-28 right-16 top-44"
+              src="/images/mobileRingLight.png"
+            />
+          </div>
+        </section>
          </section>
         <section className="app-info w-screen h-screen p-8 relative">
           <div className="halogen-line absolute bottom-0 left-0"></div>
@@ -98,7 +134,7 @@ function App() {
         <section className="lightbox w-screen h-screen justify-center items-center flex">
           <div
             style={{ background: color }}
-            className="lightbox-sub rounded-lg relative overflow-auto justify-center items-center flex"
+            className="lightbox-sub rounded-lg relative w-full justify-center items-center flex pt-5 pb-5"
           >
             <div className="lightbox-circle"></div>
             {hidden && (
@@ -116,12 +152,11 @@ function App() {
             </button>
           </div>
         </section>
-        <section className="palette"></section>
-      </main> 
-        {/* If no data message, then it will load otherwise, there is a data message */}
-        {/* <TextInput placeholder="Email address" />
-        <TextInput placeholder="Password" /> */}
-      <footer className="bg-gray-800 w-full bottom-0 items-center flex flex-full flex-col py-20">
+        <section className="palette">
+          <Palette />
+        </section>
+      </main>
+      <footer className="w-full bottom-0 items-center flex flex-full flex-col py-20">
         <address className="flex space-x-10">
           <div>
             <a href="https://twitter.com/?lang=en">
@@ -155,7 +190,11 @@ function App() {
           <p>Made with 🤝 by CodeDay Labs</p>
           <p className="text-base italic">
             Released under the
-            <a href="https://en.wikipedia.org/wiki/MIT_License" target="_blank" rel="noreferrer">
+            <a
+              href="https://en.wikipedia.org/wiki/MIT_License"
+              target="_blank"
+              rel="noreferrer"
+            >
               {" "}
               MIT license
             </a>

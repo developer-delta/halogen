@@ -1,0 +1,31 @@
+{
+    "name": "Rohini",
+    "email": "roh3290a@gmail.com",
+    "password": "HalogenIsTheBest2021",
+    "palettes": [
+        {
+            "outerRingColor": "#E20074",
+            "innerRingColor": "#40E0D0",
+            "ringColor": "#FFFFFF",
+            "ringName": "Office Morning",
+            "innerRingGradient": true,
+            "favoriteRingOrder": "3"
+        },
+        {
+            "outerRingColor": "#FFFFFF",
+            "innerRingColor": "#71c78a",
+            "ringColor": "#E67687",
+            "ringName": "Overhead Light",
+            "innerRingGradient": false,
+            "favoriteRingOrder": "1"
+        },
+        {
+            "outerRingColor": "#40E0D0",
+            "innerRingColor": "#a1a1a1",
+            "ringColor": "#ebdaf2",
+            "ringName": "Afternoon",
+            "innerRingGradient": false,
+            "favoriteRingOrder": "2"
+        }
+    ]
+}
