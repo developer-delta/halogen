@@ -63,17 +63,21 @@ function App() {
           </div>
          </section>
         <section className="app-info w-screen h-screen p-8 relative">
-          <div className="halogen-line absolute bottom-0 left-0">
-            <div className="absolute bottom-10 left-96">
-               <LinearGradient height="500px" />
-            </div>
-          </div>
+          <div className="halogen-line absolute bottom-0 left-0"></div>
           <div className="flex h-1/2 w-full">
                <div className="w-1/2 flex justify-center">
                  <img 
                  className="h-full p-8"
                  src="https://user-images.githubusercontent.com/13723156/127782437-7f221d77-d4d9-4371-ad6d-ede848f03248.png" alt="" /> 
                </div>
+               <div className="flex justify-center"> 
+               <img 
+                 className=" absolute -top-10 h-10" 
+                 src="https://user-images.githubusercontent.com/13723156/127782418-a009e7a2-294d-4abe-b46e-2ac0baac5e40.png" 
+                 alt="Circle logo"  
+               />
+               <LinearGradient height="200%" /> 
+              </div>
              <div class="flex flex-col justify-center text-left w-1/2 p-8">
                 <h2 className="text-5xl leading-relaxed">Halogen works on any screen to create the perfect lighting setup</h2>
                 <p className="leading-snug">Use the screens you have to create better lighting in your video calls. Halogen on your phone, ipad, or second monitor can make all the differnce when your video is on.</p>
