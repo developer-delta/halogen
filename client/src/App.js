@@ -104,7 +104,7 @@ function App() {
                <div className="w-1/2 flex justify-center">
                  <img 
                  className="h-full p-8"
-                 src="https://user-images.githubusercontent.com/13723156/127782437-7f221d77-d4d9-4371-ad6d-ede848f03248.png" alt="" /> 
+                 src="https://user-images.githubusercontent.com/13723156/127782437-7f221d77-d4d9-4371-ad6d-ede848f03248.png" alt="Monitor with Light Box" /> 
                </div>
                <div className="flex justify-center"> 
                <img 
@@ -127,7 +127,7 @@ function App() {
            <div className="w-1/2 flex justify-center">
              <img 
               className="h-full p-8"
-              src="https://user-images.githubusercontent.com/13723156/127782433-d937e0b7-4efe-4c09-b552-803bf6188b3e.png" alt=""/>
+              src="https://user-images.githubusercontent.com/13723156/127782433-d937e0b7-4efe-4c09-b552-803bf6188b3e.png" alt="Phone with Light Box"/>
            </div>
          </div>
         </section>
