@@ -59,7 +59,7 @@ function App() {
         </nav>
       </header>
       <main>
-        <section className="hero my-44 flex flex-row px-10 w- auto h-auto pb-44">
+        <section className="hero my-44 flex flex-row px-10 w-auto h-auto pb-44">
           <div className="container w-1/2 flex flex-col text-start justify-start items-start">
             <img
             alt="halogen"
@@ -68,8 +68,7 @@ function App() {
             <p className="pt-7 mb-8 text-4xl leading-10">Instantly improve lighting in your video calls with halogen, a web-based lighting kit for all devices</p>
             <div className="flex flex-col justify-start">
               <LinearGradient width="400px" height="4px"></LinearGradient>
-              {/* could not apply margins to the components so had to create an empty p tag */}
-              <p className="mb-8"></p>
+              <div className="mb-8"></div>
               <Button width="135px" height="45px" fontSize="17px" text="Get Started"></Button>
             </div>
           </div>
