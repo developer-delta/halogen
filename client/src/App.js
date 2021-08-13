@@ -97,7 +97,6 @@ function App() {
             />
           </div>
         </section>
-         </section>
         <section className="app-info w-screen h-screen p-8 relative">
           <div className="halogen-line absolute bottom-0 left-0"></div>
           <div className="flex h-1/2 w-full">
@@ -112,7 +111,7 @@ function App() {
                  src="https://user-images.githubusercontent.com/13723156/127782418-a009e7a2-294d-4abe-b46e-2ac0baac5e40.png" 
                  alt="Circle logo"  
                />
-               <LinearGradient height="200%" /> 
+               <LinearGradient height="200%" width= "4px" /> 
               </div>
              <div class="flex flex-col justify-center text-left w-1/2 p-8">
                 <h2 className="text-5xl leading-relaxed">Halogen works on any screen to create the perfect lighting setup</h2>
@@ -131,6 +130,12 @@ function App() {
            </div>
          </div>
         </section>
+        {/*try-it-out section */}
+        <section className="flex justify-evenly items-center mb-20 mt-28">
+          <LinearGradient width="13%" height="4px" />
+          <p className="tryText">Here, why don't you just try it out?</p>
+          <LinearGradient width="13%" height="4px"/>
+          </section>
         <section className="lightbox w-screen h-screen justify-center items-center flex">
           <div
             style={{ background: color }}
