@@ -42,7 +42,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        sect-cont
         {/*<LinearGradient width="100px" />
         <LinearGradient height="300px" />*/}
         <nav className="fixed w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg bg-gray-600 bg-opacity-50">
@@ -60,7 +59,7 @@ function App() {
         </nav>
       </header>
       <main>
-        <section className="hero my-44 flex flex-row px-10 w- auto h-auto pb-44">
+        <section className="hero my-44 flex flex-row px-10 w-auto h-auto pb-44">
           <div className="container w-1/2 flex flex-col text-start justify-start items-start">
             <img alt="halogen" className="w-3/4" src="/images/title.png" />
             <p className="pt-7 mb-8 text-4xl leading-10">
@@ -79,7 +78,7 @@ function App() {
               ></Button>
             </div>
           </div>
-        <div className="three-images w-1/2 flex flex-row flex-col items-center relative">
+          <div className="three-images w-1/2 flex flex-row flex-col items-center relative">
             <img
               alt="Women uses halogen during her meetings"
               className="w-96"
@@ -97,8 +96,7 @@ function App() {
             />
           </div>
         </section>
-         </section>
-        <section className="app-info w-screen h-screen p-8 relative">
+        <section className="app-info h-screen p-8 relative">
           <div className="halogen-line absolute bottom-0 left-0"></div>
           <div className="flex h-1/2 w-full">
                <div className="w-1/2 flex justify-center">
@@ -114,13 +112,13 @@ function App() {
                />
                <LinearGradient height="200%" /> 
               </div>
-             <div class="flex flex-col justify-center text-left w-1/2 p-8">
+             <div className="flex flex-col justify-center text-left w-1/2 p-8">
                 <h2 className="text-5xl leading-relaxed">Halogen works on any screen to create the perfect lighting setup</h2>
                 <p className="leading-snug">Use the screens you have to create better lighting in your video calls. Halogen on your phone, ipad, or second monitor can make all the differnce when your video is on.</p>
              </div>
           </div>
           <div className="flex h-1/2 w-full">
-            <div class="flex flex-col justify-center text-right w-1/2 p-8">
+            <div className="flex flex-col justify-center text-right w-1/2 p-8">
               <h2 className="text-5xl leading-relaxed">Easily sync your lightbox palettes together.</h2>
               <p className="leading-snug">Auto sync your devices to reflect changes on all your lightboxes. Or if you prefer you can configure each one individually.</p>
             </div>
@@ -131,7 +129,7 @@ function App() {
            </div>
          </div>
         </section>
-        <section className="lightbox w-screen h-screen justify-center items-center flex">
+        <section className="lightbox h-screen justify-center items-center flex">
           <div
             style={{ background: color }}
             className="lightbox-sub rounded-lg relative w-full justify-center items-center flex pt-5 pb-5"
