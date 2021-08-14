@@ -3,7 +3,6 @@
  have react added as a dependency in our package.json, there will be nothing to import. */
 import React from "react";
 import "./App.css"; //Importing the styles from the App.css file. The typical syntax is not used but the address of the CSS file.
-// import LinearGradient from "./LinearGradient";
 import { SketchPicker } from "react-color";
 import Modals from "./Modals";
 import Button from "./Button";
@@ -42,9 +41,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        sect-cont
-        {/*<LinearGradient width="100px" />
-        <LinearGradient height="300px" />*/}
         <nav className="fixed w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg bg-gray-600 bg-opacity-50">
           <button className="px-7">
             <img
@@ -79,7 +75,7 @@ function App() {
               ></Button>
             </div>
           </div>
-        <div className="three-images w-1/2 flex flex-row flex-col items-center relative">
+          <div className="three-images w-1/2 flex flex-col items-center relative">
             <img
               alt="Women uses halogen during her meetings"
               className="w-96"
@@ -97,39 +93,54 @@ function App() {
             />
           </div>
         </section>
-         </section>
         <section className="app-info w-screen h-screen p-8 relative">
           <div className="halogen-line absolute bottom-0 left-0"></div>
           <div className="flex h-1/2 w-full">
-               <div className="w-1/2 flex justify-center">
-                 <img 
-                 className="h-full p-8"
-                 src="https://user-images.githubusercontent.com/13723156/127782437-7f221d77-d4d9-4371-ad6d-ede848f03248.png" alt="Monitor with Light Box" /> 
-               </div>
-               <div className="flex justify-center"> 
-               <img 
-                 className=" absolute -top-10 h-10" 
-                 src="https://user-images.githubusercontent.com/13723156/127782418-a009e7a2-294d-4abe-b46e-2ac0baac5e40.png" 
-                 alt="Circle logo"  
-               />
-               <LinearGradient height="200%" /> 
-              </div>
-             <div class="flex flex-col justify-center text-left w-1/2 p-8">
-                <h2 className="text-5xl leading-relaxed">Halogen works on any screen to create the perfect lighting setup</h2>
-                <p className="leading-snug">Use the screens you have to create better lighting in your video calls. Halogen on your phone, ipad, or second monitor can make all the differnce when your video is on.</p>
-             </div>
+            <div className="w-1/2 flex justify-center">
+              <img
+                className="h-full p-8"
+                src="https://user-images.githubusercontent.com/13723156/127782437-7f221d77-d4d9-4371-ad6d-ede848f03248.png"
+                alt="Monitor with Light Box"
+              />
+            </div>
+            <div className="flex justify-center">
+              <img
+                className=" absolute -top-10 h-10"
+                src="https://user-images.githubusercontent.com/13723156/127782418-a009e7a2-294d-4abe-b46e-2ac0baac5e40.png"
+                alt="Circle logo"
+              />
+              <LinearGradient height="200%" />
+            </div>
+            <div class="flex flex-col justify-center text-left w-1/2 p-8">
+              <h2 className="text-5xl leading-relaxed">
+                Halogen works on any screen to create the perfect lighting setup
+              </h2>
+              <p className="leading-snug">
+                Use the screens you have to create better lighting in your video
+                calls. Halogen on your phone, ipad, or second monitor can make
+                all the differnce when your video is on.
+              </p>
+            </div>
           </div>
           <div className="flex h-1/2 w-full">
             <div class="flex flex-col justify-center text-right w-1/2 p-8">
-              <h2 className="text-5xl leading-relaxed">Easily sync your lightbox palettes together.</h2>
-              <p className="leading-snug">Auto sync your devices to reflect changes on all your lightboxes. Or if you prefer you can configure each one individually.</p>
+              <h2 className="text-5xl leading-relaxed">
+                Easily sync your lightbox palettes together.
+              </h2>
+              <p className="leading-snug">
+                Auto sync your devices to reflect changes on all your
+                lightboxes. Or if you prefer you can configure each one
+                individually.
+              </p>
             </div>
-           <div className="w-1/2 flex justify-center">
-             <img 
-              className="h-full p-8"
-              src="https://user-images.githubusercontent.com/13723156/127782433-d937e0b7-4efe-4c09-b552-803bf6188b3e.png" alt="Phone with Light Box"/>
-           </div>
-         </div>
+            <div className="w-1/2 flex justify-center">
+              <img
+                className="h-full p-8"
+                src="https://user-images.githubusercontent.com/13723156/127782433-d937e0b7-4efe-4c09-b552-803bf6188b3e.png"
+                alt="Phone with Light Box"
+              />
+            </div>
+          </div>
         </section>
         <section className="lightbox w-screen h-screen justify-center items-center flex">
           <div
