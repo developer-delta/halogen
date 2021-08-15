@@ -105,7 +105,7 @@ function App() {
             </div>
             <div className="flex justify-center">
               <img
-                className=" absolute -top-10 h-10"
+                className="absolute -top-10 h-10"
                 src="https://user-images.githubusercontent.com/13723156/127782418-a009e7a2-294d-4abe-b46e-2ac0baac5e40.png"
                 alt="Circle logo"
               />
@@ -118,7 +118,7 @@ function App() {
               <p className="leading-snug">
                 Use the screens you have to create better lighting in your video
                 calls. Halogen on your phone, ipad, or second monitor can make
-                all the differnce when your video is on.
+                all the difference when your video is on.
               </p>
             </div>
           </div>

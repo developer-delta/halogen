@@ -6,7 +6,7 @@ const cors = require("cors"); //for security
 const passport = require("passport"); //for entire authentication library
 const passportLocal = require("passport-local").Strategy; //passportLocal as a strategy --- local username and password
 const cookieParser = require("cookie-parser"); //parse all cookies that we use for the authentication
-const bcrypt = require("bcryptjs"); //for hasing the passwords
+const bcrypt = require("bcryptjs"); //for hashing the passwords
 const session = require("express-session"); //for our Express sessions
 const User = require("./userData");
 

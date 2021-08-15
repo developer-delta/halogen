@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-//schema allows us to to post users to the database
+// schema defines the structure of our data so we can save users to the database in a uniform format
 const user = new mongoose.Schema({
   username: String,
   password: String,

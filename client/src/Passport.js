@@ -52,7 +52,7 @@ function Passport() {
       <div className="text-center">
         <h2 className="text-5xl">halogen</h2>
         <h3 className="text-xs text-gray-300 py-2">
-          Login to save and syn palettes
+          Login to save and sync palettes
         </h3>
       </div>
       <div className="form py-3 flex justify-center items-center">
