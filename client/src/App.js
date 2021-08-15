@@ -8,7 +8,7 @@ import { SketchPicker } from "react-color";
 import Modals from "./Modals";
 import Button from "./Button";
 import LinearGradient from "./LinearGradient";
-
+import Palette from "./Palette";
 
 //A functional component is the JavaScript function. App is the name of the function.
 function App() {
@@ -42,8 +42,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <LinearGradient width="100px" />
-        <LinearGradient height="300px" /> */}
+        {/*<LinearGradient width="100px" />
+        <LinearGradient height="300px" />*/}
         <nav className="fixed w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg bg-gray-600 bg-opacity-50">
           <button className="px-7">
             <img
@@ -61,39 +61,77 @@ function App() {
       <main>
         <section className="hero my-44 flex flex-row px-10 w-auto h-auto pb-44">
           <div className="container w-1/2 flex flex-col text-start justify-start items-start">
-            <img
-            alt="halogen"
-             className="w-3/4"
-             src="/images/title.png"/>
-            <p className="pt-7 mb-8 text-4xl leading-10">Instantly improve lighting in your video calls with halogen, a web-based lighting kit for all devices</p>
+            <img alt="halogen" className="w-3/4" src="/images/title.png" />
+            <p className="pt-7 mb-8 text-4xl leading-10">
+              Instantly improve lighting in your video calls with halogen, a
+              web-based lighting kit for all devices
+            </p>
             <div className="flex flex-col justify-start">
               <LinearGradient width="400px" height="4px"></LinearGradient>
               <div className="mb-8"></div>
-              <Button width="135px" height="45px" fontSize="17px" text="Get Started"></Button>
+              <Button
+                width="135px"
+                height="45px"
+                fontSize="17px"
+                text="Get Started"
+              ></Button>
             </div>
           </div>
           <div className="three-images w-1/2 flex flex-row flex-col items-center relative">
-              <img
-                alt="Women uses halogen during her meetings"
-                className="w-96" 
-                src = "/images/heroSectionPerson.png"/>
-              <img 
+            <img
+              alt="Women uses halogen during her meetings"
+              className="w-96"
+              src="/images/heroSectionPerson.png"
+            />
+            <img
               alt="halogen can also be used on laptops and computers"
               className="absolute w-72 left-4 top-44"
-              src = "/images/laptopRingLight.png"/>
-              <img 
-                alt="halogen can be used on mobiles"
-                className="absolute w-28 right-16 top-44"
-                src = "/images/mobileRingLight.png"/>
-              
-            </div>
+              src="/images/laptopRingLight.png"
+            />
+            <img
+              alt="halogen can be used on mobiles"
+              className="absolute w-28 right-16 top-44"
+              src="/images/mobileRingLight.png"
+            />
+          </div>
         </section>
-
-        <section className="app-info"></section>
-        <section className="lightbox w-full h-screen justify-center items-center flex">
+        <section className="app-info h-screen p-8 relative">
+          <div className="halogen-line absolute bottom-0 left-0"></div>
+          <div className="flex h-1/2 w-full">
+               <div className="w-1/2 flex justify-center">
+                 <img 
+                 className="h-full p-8"
+                 src="https://user-images.githubusercontent.com/13723156/127782437-7f221d77-d4d9-4371-ad6d-ede848f03248.png" alt="Monitor with Light Box" /> 
+               </div>
+               <div className="flex justify-center"> 
+               <img 
+                 className=" absolute -top-10 h-10" 
+                 src="https://user-images.githubusercontent.com/13723156/127782418-a009e7a2-294d-4abe-b46e-2ac0baac5e40.png" 
+                 alt="Circle logo"  
+               />
+               <LinearGradient height="200%" /> 
+              </div>
+             <div className="flex flex-col justify-center text-left w-1/2 p-8">
+                <h2 className="text-5xl leading-relaxed">Halogen works on any screen to create the perfect lighting setup</h2>
+                <p className="leading-snug">Use the screens you have to create better lighting in your video calls. Halogen on your phone, ipad, or second monitor can make all the differnce when your video is on.</p>
+             </div>
+          </div>
+          <div className="flex h-1/2 w-full">
+            <div className="flex flex-col justify-center text-right w-1/2 p-8">
+              <h2 className="text-5xl leading-relaxed">Easily sync your lightbox palettes together.</h2>
+              <p className="leading-snug">Auto sync your devices to reflect changes on all your lightboxes. Or if you prefer you can configure each one individually.</p>
+            </div>
+           <div className="w-1/2 flex justify-center">
+             <img 
+              className="h-full p-8"
+              src="https://user-images.githubusercontent.com/13723156/127782433-d937e0b7-4efe-4c09-b552-803bf6188b3e.png" alt="Phone with Light Box"/>
+           </div>
+         </div>
+        </section>
+        <section className="lightbox h-screen justify-center items-center flex">
           <div
             style={{ background: color }}
-            className="lightbox-sub rounded-lg relative w-full justify-center items-center flex"
+            className="lightbox-sub rounded-lg relative w-full justify-center items-center flex pt-5 pb-5"
           >
             <div className="lightbox-circle"></div>
             {hidden && (
@@ -111,7 +149,9 @@ function App() {
             </button>
           </div>
         </section>
-        <section className="palette"></section>
+        <section className="palette">
+          <Palette />
+        </section>
       </main>
       <footer className="w-full bottom-0 items-center flex flex-full flex-col py-20">
         <address className="flex space-x-10">
