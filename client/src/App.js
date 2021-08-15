@@ -68,8 +68,7 @@ function App() {
             </p>
             <div className="flex flex-col justify-start">
               <LinearGradient width="400px" height="4px"></LinearGradient>
-              {/* could not apply margins to the components so had to create an empty p tag */}
-              <p className="mb-8"></p>
+              <div className="mb-8"></div>
               <Button
                 width="135px"
                 height="45px"
