@@ -56,7 +56,7 @@ function App() {
         </nav>
       </header>
       <main>
-        <section className="hero my-44 flex flex-row px-10 w- auto h-auto pb-44">
+        <section className="hero my-44 flex flex-row px-10 w-auto h-auto pb-44">
           <div className="container w-1/2 flex flex-col text-start justify-start items-start">
             <img alt="halogen" className="w-3/4" src="/images/title.png" />
             <p className="pt-7 mb-8 text-4xl leading-10">
@@ -65,8 +65,7 @@ function App() {
             </p>
             <div className="flex flex-col justify-start">
               <LinearGradient width="400px" height="4px"></LinearGradient>
-              {/* could not apply margins to the components so had to create an empty p tag */}
-              <p className="mb-8"></p>
+              <div className="mb-8"></div>
               <Button
                 width="135px"
                 height="45px"
@@ -76,6 +75,7 @@ function App() {
             </div>
           </div>
           <div className="three-images w-1/2 flex flex-col items-center relative">
+
             <img
               alt="Women uses halogen during her meetings"
               className="w-96"
@@ -142,7 +142,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="lightbox w-screen h-screen justify-center items-center flex">
+        <section className="lightbox h-screen justify-center items-center flex">
           <div
             style={{ background: color }}
             className="lightbox-sub rounded-lg relative w-full justify-center items-center flex pt-5 pb-5"
