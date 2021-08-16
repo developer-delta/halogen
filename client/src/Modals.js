@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
-import LoginSignUp from "./LoginSignUp";
 import Button from "./Button";
+import Passport from "./Passport";
 
 Modal.setAppElement("#root"); //To remove error/warning in console for accessibility reasons
 function Modals(props) {
@@ -22,7 +22,6 @@ function Modals(props) {
             //Modal's style prop
             overlay: {
               position: "fixed",
-              paddingTop: "30px",
               zIndex: 20,
               backgroundColor: "rgba(0, 0, 0, 0.85)",
               backdropFilter: "blur(10px)",
@@ -35,7 +34,7 @@ function Modals(props) {
           >
             x
           </button>
-          <LoginSignUp />
+          <Passport />
         </Modal>
       </div>
     </div>
