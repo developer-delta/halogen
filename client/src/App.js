@@ -20,6 +20,7 @@ function App() {
   /* This keeps track of our color; it allows us to change the background based on the color picker. To add background's color is
      to equal the color state, and the current initial is #47C4AF. To change color is to use setColor by using change event. */
   const [color, setColor] = React.useState("#47C4AF");
+  const [innerColor, setInnerColor] = React.useState("#1844AF");
   /* Hidden is for a button to close the color picker, so there is a ternary operator or condition for it. Initially, it is 
      false, so setHidden is to toggle based on the false or true condition. */
   const [hidden, setHidden] = React.useState(false);
@@ -144,15 +145,24 @@ function App() {
         </section>
         <section className="lightbox h-screen justify-center items-center flex">
           <div
-            style={{ background: color }}
+            style={{ backgroundImage: `radial-gradient(${innerColor}, ${color}` }}
             className="lightbox-sub rounded-lg relative w-full justify-center items-center flex pt-5 pb-5"
           >
-            <div className="lightbox-circle"></div>
+            <div className="lightbox-circle">
+              
+            </div>
             {hidden && (
               <SketchPicker
                 className="sketchpicker float-right"
                 color={color}
                 onChange={(updatedColor) => setColor(updatedColor.hex)}
+              />
+            )}
+            {hidden && (
+              <SketchPicker
+                className="sketchpicker-inner float-right"
+                color={innerColor}
+                onChange={(updatedInnerColor) => setInnerColor(updatedInnerColor.hex)}
               />
             )}
             <button
