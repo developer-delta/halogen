@@ -8,6 +8,7 @@ import Modals from "./Modals";
 import Button from "./Button";
 import LinearGradient from "./LinearGradient";
 import Palette from "./Palette";
+import SaveModal from "./SaveModal";
 
 //A functional component is the JavaScript function. App is the name of the function.
 function App() {
@@ -151,6 +152,7 @@ function App() {
             className="lightbox-sub rounded-lg relative w-full justify-center items-center flex pt-5 pb-5"
           >
             <div className="lightbox-circle"></div>
+            <SaveModal />
             {hidden && (
               <SketchPicker
                 className="sketchpicker float-right "
@@ -160,7 +162,7 @@ function App() {
             )}
             <button
               onClick={() => setHidden(!hidden)}
-              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right absolute right-10 bottom-20"
+              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right absolute right-7 bottom-24"
             >
               {hidden
                 ? "Close color picker"
@@ -177,7 +179,7 @@ function App() {
             )}
             <button
               onClick={() => setInnerHidden(!innerHidden)}
-              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right absolute right-10 bottom-10"
+              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right absolute right-7 bottom-14"
             >
               {innerHidden
                 ? "Close color picker"
