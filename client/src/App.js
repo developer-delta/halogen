@@ -94,7 +94,7 @@ function App() {
             />
           </div>
         </section>
-        <section className="app-info w-screen h-screen p-8 relative">
+        <section className="app-info h-screen p-8 relative">
           <div className="halogen-line absolute bottom-0 left-0"></div>
           <div className="flex h-1/2 w-full">
             <div className="w-1/2 flex justify-center">
@@ -112,7 +112,7 @@ function App() {
               />
               <LinearGradient height="200%" />
             </div>
-            <div class="flex flex-col justify-center text-left w-1/2 p-8">
+            <div className="flex flex-col justify-center text-left w-1/2 p-8">
               <h2 className="text-5xl leading-relaxed">
                 Halogen works on any screen to create the perfect lighting setup
               </h2>
@@ -124,7 +124,7 @@ function App() {
             </div>
           </div>
           <div className="flex h-1/2 w-full">
-            <div class="flex flex-col justify-center text-right w-1/2 p-8">
+            <div className="flex flex-col justify-center text-right w-1/2 p-8">
               <h2 className="text-5xl leading-relaxed">
                 Easily sync your lightbox palettes together.
               </h2>
