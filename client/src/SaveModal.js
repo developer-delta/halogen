@@ -23,7 +23,7 @@ function SaveModal() {
           style={{
             overlay: {
               position: "fixed",
-              paddingTop: "12%",
+              paddingTop: "12% ",
               zIndex: 20,
               backgroundColor: "rgba(0, 0, 0, 0.85)",
               backdropFilter: "blur(10px)",
