@@ -8,27 +8,28 @@ import Modals from "./Modals";
 import Button from "./Button";
 import LinearGradient from "./LinearGradient";
 import Palette from "./Palette";
+import SaveModal from "./SaveModal";
 
 //A functional component is the JavaScript function. App is the name of the function.
 function App() {
   //A syntax of useState hook is Destructuring Assignment what looks like properties of an array. It is concise and readable.
   /* useState is a react method that returns an array of two values - the current state value & the state setter, where we 
-      update the value of this state.  Null is an initial state argument, and this indicates we  don't have the value needed 
-      during the first render. */
+       update the value of this state.  Null is an initial state argument, and this indicates we  don't have the value needed 
+       during the first render. */
 
   const [data, setData] = React.useState(null);
   /* This keeps track of our color; it allows us to change the background based on the color picker. To add background's color is
-      to equal the color state, and the current initial is #47C4AF. To change color is to use setColor by using change event. */
+       to equal the color state, and the current initial is #47C4AF. To change color is to use setColor by using change event. */
   const [color, setColor] = React.useState("#47C4AF");
   const [innerColor, setInnerColor] = React.useState("#1844AF");
   /* Hidden is for a button to close the color picker, so there is a ternary operator or condition for it. Initially, it is 
-      false, so setHidden is to toggle based on the false or true condition. */
+       false, so setHidden is to toggle based on the false or true condition. */
   const [hidden, setHidden] = React.useState(false);
   const [innerHidden, setInnerHidden] = React.useState(false);
 
   //Fetch API allows for asyncronous http requests and returns a promise.
   /* useEffect hook is a named export from the React library. It is explained as that the effect happens after render (whenever
-      a change happens). Currently, the useEffect is performing the data fetching. */
+       a change happens). Currently, the useEffect is performing the data fetching. */
   React.useEffect(() => {
     fetch("/api")
       //.then() function returns a promise (promise is like a placeholder for a value).
@@ -37,9 +38,9 @@ function App() {
   }, []);
 
   /* JSX is a templating language for React. It looks like a lot of HTML used for React. Currently, the codes show the curly
-     braces, which is to treat the code located between JSX tags inside the curly braces as markers of the beginning and end
-     of a JavaScript injection into JSX like a quotation for strings.  Because without the curly braces, any code between tags
-     of a JSX element will be read as text like HTML and not as JavaScript. */
+      braces, which is to treat the code located between JSX tags inside the curly braces as markers of the beginning and end
+      of a JavaScript injection into JSX like a quotation for strings.  Because without the curly braces, any code between tags
+      of a JSX element will be read as text like HTML and not as JavaScript. */
   return (
     <div className="App">
       <header className="App-header">
@@ -151,6 +152,7 @@ function App() {
             className="lightbox-sub rounded-lg relative w-full justify-center items-center flex pt-5 pb-5"
           >
             <div className="lightbox-circle"></div>
+            <SaveModal />
             {hidden && (
               <SketchPicker
                 className="sketchpicker float-right "
@@ -160,7 +162,7 @@ function App() {
             )}
             <button
               onClick={() => setHidden(!hidden)}
-              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right absolute right-10 bottom-20"
+              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right absolute right-7 bottom-24"
             >
               {hidden
                 ? "Close color picker"
@@ -177,7 +179,7 @@ function App() {
             )}
             <button
               onClick={() => setInnerHidden(!innerHidden)}
-              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right absolute right-10 bottom-10"
+              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right absolute right-7 bottom-14"
             >
               {innerHidden
                 ? "Close color picker"
