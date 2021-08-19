@@ -67,7 +67,7 @@ function App() {
               web-based lighting kit for all devices
             </p>
             <div className="flex flex-col justify-start">
-              <LinearGradient width="400px" height="4px"></LinearGradient>
+              <LinearGradient width="400px"></LinearGradient>
               <div className="mb-8"></div>
               <Button
                 width="135px"
@@ -109,7 +109,7 @@ function App() {
                  src="https://user-images.githubusercontent.com/13723156/127782418-a009e7a2-294d-4abe-b46e-2ac0baac5e40.png" 
                  alt="Circle logo"  
                />
-               <LinearGradient height="200%" width= "4px" /> 
+               <LinearGradient height="200%"/> 
               </div>
              <div className="flex flex-col justify-center text-left w-1/2 p-8">
                 <h2 className="text-5xl leading-relaxed">Halogen works on any screen to create the perfect lighting setup</h2>
@@ -130,9 +130,9 @@ function App() {
         </section>
         {/*try-it-out section */}
         <section className="flex justify-evenly items-center mb-20 mt-28">
-          <LinearGradient width="13%" height="4px" />
-          <p className="tryText">Here, why don't you just try it out?</p>
-          <LinearGradient width="13%" height="4px"/>
+          <LinearGradient width="13%" />
+          <p className="try-text">Here, why don't you just try it out?</p>
+          <LinearGradient width="13%"/>
           </section>
         <section className="lightbox h-screen justify-center items-center flex">
           <div
