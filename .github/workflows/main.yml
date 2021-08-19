@@ -40,5 +40,5 @@ jobs:
         run: npm install
         
       # Runs ESLint
-      - name: Run ESLint
-        run: eslint . --ext .js,.jsx,.ts,.tsx
+      # - name: Run ESLint
+      # run: eslint . --ext .js,.jsx,.ts,.tsx
