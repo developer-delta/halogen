@@ -37,7 +37,7 @@ jobs:
       
       # Installs modules
       - name: Install modules
-        run: yarn
+        run: npm install
         
       # Runs ESLint
       - name: Run ESLint
