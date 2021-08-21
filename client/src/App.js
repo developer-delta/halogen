@@ -3,7 +3,6 @@
  have react added as a dependency in our package.json, there will be nothing to import. */
 import React from "react";
 import "./App.css"; //Importing the styles from the App.css file. The typical syntax is not used but the address of the CSS file.
-// import LinearGradient from "./LinearGradient";
 import { SketchPicker } from "react-color";
 import Modals from "./Modals";
 import Button from "./Button";
@@ -14,20 +13,22 @@ import Palette from "./Palette";
 function App() {
   //A syntax of useState hook is Destructuring Assignment what looks like properties of an array. It is concise and readable.
   /* useState is a react method that returns an array of two values - the current state value & the state setter, where we 
-     update the value of this state.  Null is an initial state argument, and this indicates we  don't have the value needed 
-     during the first render. */
+      update the value of this state.  Null is an initial state argument, and this indicates we  don't have the value needed 
+      during the first render. */
 
   const [data, setData] = React.useState(null);
   /* This keeps track of our color; it allows us to change the background based on the color picker. To add background's color is
-     to equal the color state, and the current initial is #47C4AF. To change color is to use setColor by using change event. */
+      to equal the color state, and the current initial is #47C4AF. To change color is to use setColor by using change event. */
   const [color, setColor] = React.useState("#47C4AF");
+  const [innerColor, setInnerColor] = React.useState("#1844AF");
   /* Hidden is for a button to close the color picker, so there is a ternary operator or condition for it. Initially, it is 
-     false, so setHidden is to toggle based on the false or true condition. */
+      false, so setHidden is to toggle based on the false or true condition. */
   const [hidden, setHidden] = React.useState(false);
+  const [innerHidden, setInnerHidden] = React.useState(false);
 
   //Fetch API allows for asyncronous http requests and returns a promise.
   /* useEffect hook is a named export from the React library. It is explained as that the effect happens after render (whenever
-     a change happens). Currently, the useEffect is performing the data fetching. */
+      a change happens). Currently, the useEffect is performing the data fetching. */
   React.useEffect(() => {
     fetch("/api")
       //.then() function returns a promise (promise is like a placeholder for a value).
@@ -36,14 +37,12 @@ function App() {
   }, []);
 
   /* JSX is a templating language for React. It looks like a lot of HTML used for React. Currently, the codes show the curly
-    braces, which is to treat the code located between JSX tags inside the curly braces as markers of the beginning and end
-    of a JavaScript injection into JSX like a quotation for strings.  Because without the curly braces, any code between tags
-    of a JSX element will be read as text like HTML and not as JavaScript. */
+     braces, which is to treat the code located between JSX tags inside the curly braces as markers of the beginning and end
+     of a JavaScript injection into JSX like a quotation for strings.  Because without the curly braces, any code between tags
+     of a JSX element will be read as text like HTML and not as JavaScript. */
   return (
     <div className="App">
       <header className="App-header">
-        {/*<LinearGradient width="100px" />
-        <LinearGradient height="300px" />*/}
         <nav className="fixed w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg bg-gray-600 bg-opacity-50">
           <button className="px-7">
             <img
@@ -77,7 +76,7 @@ function App() {
               ></Button>
             </div>
           </div>
-          <div className="three-images w-1/2 flex flex-row flex-col items-center relative">
+          <div className="three-images w-1/2 flex flex-col items-center relative">
             <img
               alt="Women uses halogen during her meetings"
               className="w-96"
@@ -98,35 +97,51 @@ function App() {
         <section className="app-info h-screen p-8 relative">
           <div className="halogen-line absolute bottom-0 left-0"></div>
           <div className="flex h-1/2 w-full">
-               <div className="w-1/2 flex justify-center">
-                 <img 
-                 className="h-full p-8"
-                 src="https://user-images.githubusercontent.com/13723156/127782437-7f221d77-d4d9-4371-ad6d-ede848f03248.png" alt="Monitor with Light Box" /> 
-               </div>
-               <div className="flex justify-center"> 
-               <img 
-                 className=" absolute -top-10 h-10" 
-                 src="https://user-images.githubusercontent.com/13723156/127782418-a009e7a2-294d-4abe-b46e-2ac0baac5e40.png" 
-                 alt="Circle logo"  
-               />
-               <LinearGradient height="200%"/> 
-              </div>
-             <div className="flex flex-col justify-center text-left w-1/2 p-8">
-                <h2 className="text-5xl leading-relaxed">Halogen works on any screen to create the perfect lighting setup</h2>
-                <p className="leading-snug">Use the screens you have to create better lighting in your video calls. Halogen on your phone, ipad, or second monitor can make all the differnce when your video is on.</p>
-             </div>
+            <div className="w-1/2 flex justify-center">
+              <img
+                className="h-full p-8"
+                src="https://user-images.githubusercontent.com/13723156/127782437-7f221d77-d4d9-4371-ad6d-ede848f03248.png"
+                alt="Monitor with Light Box"
+              />
+            </div>
+            <div className="flex justify-center">
+              <img
+                className="absolute -top-10 h-10"
+                src="https://user-images.githubusercontent.com/13723156/127782418-a009e7a2-294d-4abe-b46e-2ac0baac5e40.png"
+                alt="Circle logo"
+              />
+              <LinearGradient height="200%" />
+            </div>
+            <div className="flex flex-col justify-center text-left w-1/2 p-8">
+              <h2 className="text-5xl leading-relaxed">
+                Halogen works on any screen to create the perfect lighting setup
+              </h2>
+              <p className="leading-snug">
+                Use the screens you have to create better lighting in your video
+                calls. Halogen on your phone, ipad, or second monitor can make
+                all the difference when your video is on.
+              </p>
+            </div>
           </div>
           <div className="flex h-1/2 w-full">
             <div className="flex flex-col justify-center text-right w-1/2 p-8">
-              <h2 className="text-5xl leading-relaxed">Easily sync your lightbox palettes together.</h2>
-              <p className="leading-snug">Auto sync your devices to reflect changes on all your lightboxes. Or if you prefer you can configure each one individually.</p>
+              <h2 className="text-5xl leading-relaxed">
+                Easily sync your lightbox palettes together.
+              </h2>
+              <p className="leading-snug">
+                Auto sync your devices to reflect changes on all your
+                lightboxes. Or if you prefer you can configure each one
+                individually.
+              </p>
             </div>
-           <div className="w-1/2 flex justify-center">
-             <img 
-              className="h-full p-8"
-              src="https://user-images.githubusercontent.com/13723156/127782433-d937e0b7-4efe-4c09-b552-803bf6188b3e.png" alt="Phone with Light Box"/>
-           </div>
-         </div>
+            <div className="w-1/2 flex justify-center">
+              <img
+                className="h-full p-8"
+                src="https://user-images.githubusercontent.com/13723156/127782433-d937e0b7-4efe-4c09-b552-803bf6188b3e.png"
+                alt="Phone with Light Box"
+              />
+            </div>
+          </div>
         </section>
         {/*try-it-out section */}
         <section className="flex justify-evenly items-center mb-20 mt-28">
@@ -136,13 +151,15 @@ function App() {
           </section>
         <section className="lightbox h-screen justify-center items-center flex">
           <div
-            style={{ background: color }}
+            style={{
+              backgroundImage: `radial-gradient(${innerColor}, ${color}`,
+            }}
             className="lightbox-sub rounded-lg relative w-full justify-center items-center flex pt-5 pb-5"
           >
             <div className="lightbox-circle"></div>
             {hidden && (
               <SketchPicker
-                className="sketchpicker float-right"
+                className="sketchpicker float-right "
                 color={color}
                 onChange={(updatedColor) => setColor(updatedColor.hex)}
               />
@@ -151,7 +168,26 @@ function App() {
               onClick={() => setHidden(!hidden)}
               className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right absolute right-10 bottom-20"
             >
-              {hidden ? "Close color picker" : "Open color picker"}
+              {hidden
+                ? "Close color picker"
+                : "Open color picker for rectangle"}
+            </button>
+            {innerHidden && (
+              <SketchPicker
+                className="sketchpicker float-right"
+                color={innerColor}
+                onChange={(updatedInnerColor) =>
+                  setInnerColor(updatedInnerColor.hex)
+                }
+              />
+            )}
+            <button
+              onClick={() => setInnerHidden(!innerHidden)}
+              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right absolute right-10 bottom-10"
+            >
+              {innerHidden
+                ? "Close color picker"
+                : "Open color picker for inner circle"}
             </button>
           </div>
         </section>
