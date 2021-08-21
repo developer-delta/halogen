@@ -66,7 +66,7 @@ function App() {
               web-based lighting kit for all devices
             </p>
             <div className="flex flex-col justify-start">
-              <LinearGradient width="400px" height="4px"></LinearGradient>
+              <LinearGradient width="400px"></LinearGradient>
               <div className="mb-8"></div>
               <Button
                 width="135px"
@@ -143,7 +143,13 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="lightbox justify-center items-center flex">
+        {/*try-it-out section */}
+        <section className="flex justify-evenly items-center mb-20 mt-28">
+          <LinearGradient width="13%" />
+          <p className="try-text">Here, why don't you just try it out?</p>
+          <LinearGradient width="13%"/>
+          </section>
+        <section className="lightbox h-screen justify-center items-center flex">
           <div
             style={{
               backgroundImage: `radial-gradient(${innerColor}, ${color}`,
