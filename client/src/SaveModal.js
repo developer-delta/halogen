@@ -18,8 +18,9 @@ function SaveModal() {
       <div>
         <Modal
           className="m-auto w-max mt-20 text-black"
-          isOpen={modalIsOpen}
-          onRequestClose={() => setmodalIsOpen(false)}
+          isOpen={modalIsOpen} //Allow a user to open the modal after clicking "Save" button
+          onRequestClose={() => setmodalIsOpen(false)} //Clicking on overlay or pressing esc keyboard close the modal
+          //Modal's style prop
           style={{
             overlay: {
               position: "fixed",
@@ -35,7 +36,7 @@ function SaveModal() {
             <TextInput placeholder="Add Palette's Name" />
             <div className="mt-5 flex justify-between">
               <Button
-                text="Cancle"
+                text="Cancel"
                 color="black"
                 background="white"
                 width="48%"
