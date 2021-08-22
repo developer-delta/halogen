@@ -14,6 +14,7 @@ const User = require("./userData");
 const mockResponse = require("../mockResponse.json");
 
 const PORT = process.env.PORT || 3001;
+const clientUrl = process.env.CLIENT_URL || 'http://localhost:3000';
 
 const app = express();
 app.use(express.static(path.resolve(__dirname, "../client/build")));
@@ -36,8 +37,8 @@ app.use(express.json()); //For middleware to parse incoming requests as json
 app.use(express.urlencoded({ extended: true })); //For middleware to recogizes the incoming Request object as strings or arrays
 app.use(
   cors({
-    //To allow requests to our web server from another domain which in this case is http://localhost:3000
-    origin: "http://localhost:3000", // <-- location of the react app we're connecting to
+    //To allow requests to our web server from another domain
+    origin: clientUrl, // <-- location of the react app we're connecting to
     credentials: true,
   })
 );
