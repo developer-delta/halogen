@@ -12,31 +12,31 @@ function Modals(props) {
   const closeModal = () => setmodalIsOpen(false);
   return (
     <div>
-      <Button text="Sign up" onClick={openModal} />
-      <div>
-        <Modal
-          className="m-auto w-max mt-20 text-black"
-          isOpen={modalIsOpen} //To open this modal based on a state variable that is set on button click
-          onRequestClose={closeModal} //Either clicking on overlay or pressing ESC to close this modal
-          style={{
-            //Modal's style prop
-            overlay: {
-              position: "fixed",
-              zIndex: 20,
-              backgroundColor: "rgba(0, 0, 0, 0.85)",
-              backdropFilter: "blur(10px)",
-            },
-          }}
-        >
-          <button
-            className="float-right text-white text-xl px-3 py-1 "
-            onClick={closeModal}
-          >
-            x
-          </button>
-          <Passport />
-        </Modal>
+      <div className="mr-10">
+        <Button text="Sign up" onClick={openModal} />
       </div>
+      <Modal
+        className="m-auto w-max mt-20 text-black"
+        isOpen={modalIsOpen} //To open this modal based on a state variable that is set on button click
+        onRequestClose={closeModal} //Either clicking on overlay or pressing ESC to close this modal
+        style={{
+          //Modal's style prop
+          overlay: {
+            position: "fixed",
+            zIndex: 20,
+            backgroundColor: "rgba(0, 0, 0, 0.85)",
+            backdropFilter: "blur(10px)",
+          },
+        }}
+      >
+        <button
+          className="float-right text-white text-xl px-3 py-1 "
+          onClick={closeModal}
+        >
+          x
+        </button>
+        <Passport />
+      </Modal>
     </div>
   );
 }
