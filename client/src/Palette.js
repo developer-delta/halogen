@@ -4,7 +4,7 @@ function Palette() {
   const [paletteItems, setPaletteItems] = React.useState();
 
   React.useEffect(() => {
-    fetch(`/profiles`)
+    fetch('/profiles')
       .then((res) => res.json())
       .then((data) => {
         setPaletteItems(data.palettes);
