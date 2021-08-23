@@ -15,6 +15,7 @@ const mockResponse = require("../mockResponse.json");
 
 const PORT = process.env.PORT || 3001;
 const clientUrl = process.env.CLIENT_URL || 'http://localhost:3000';
+const sessionSecret = process.env.SESSION_SECRET;
 
 const app = express();
 app.use(express.static(path.resolve(__dirname, "../client/build")));
@@ -44,12 +45,12 @@ app.use(
 );
 app.use(
   session({
-    secret: "secretcode",
+    secret: sessionSecret,
     resave: true,
     saveUninitialized: true,
   })
 );
-app.use(cookieParser("secretcode"));
+app.use(cookieParser(sessionSecret));
 app.use(passport.initialize()); //Intitializes passport to make this fully functional
 app.use(passport.session()); //Intitializes the session that is part of passport
 require("./passportConfig")(passport); //Pass the instance of passport that we have used as a parameter
@@ -57,11 +58,6 @@ require("./passportConfig")(passport); //Pass the instance of passport that we h
 //----------------------------------------- END OF MIDDLEWARE-----------------------------------------------
 
 //----------------------------------------- START OF ROUTES-------------------------------------------------
-
-app.get("/api", (req, res) => {
-  //json stands for javascript object notation (data type)
-  res.json({ message: "Halogen under construction" });
-});
 
 //Uses res.json to return mockResponse as json
 app.get("/profiles", function (req, res, next) {
@@ -90,7 +86,7 @@ app.post("/register", (req, res) => {
     if (err) throw err;
     if (doc) res.send("User Already Exists");
     if (!doc) {
-      const hashedPassword = await bcrypt.hash(req.body.password, 10); //Hash password to eliminate plain  text password
+      const hashedPassword = await bcrypt.hash(req.body.password, 10); //Hash password to eliminate plain text password
       const newUser = new User({
         username: req.body.username,
         password: hashedPassword,

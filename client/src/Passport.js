@@ -8,7 +8,7 @@ function Passport() {
   const [registerPassword, setRegisterPassword] = React.useState("");
   const [loginUsername, setLoginUsername] = React.useState("");
   const [loginPassword, setLoginPassword] = React.useState("");
-  const [data, setData] = React.useState(null);
+  const [userData, setUserData] = React.useState(null);
 
   //To run register, login, and get user methods -- Sent to the backend
   //In data property for register/login, from state values, when user types input and submit, they  will ship that data there
@@ -30,7 +30,7 @@ function Passport() {
         username: loginUsername,
         password: loginPassword,
       },
-      withCredentials: true,
+      withCredentials: true, // allows for cross-origin resource sharing on different URLs
       url: "http://localhost:3001/login",
     }).then((res) => console.log(res));
   };
@@ -40,7 +40,7 @@ function Passport() {
       withCredentials: true,
       url: "http://localhost:3001/user",
     }).then((res) => {
-      setData(res.data);
+      setUserData(res.data);
       console.log(res.data);
     });
   };
@@ -98,8 +98,8 @@ function Passport() {
         >
           Get Logged in User!
         </button>
-        {data ? (
-          <h2 className="text-xl mt-3">Welcome Back {data.username}</h2>
+        {userData ? (
+          <h2 className="text-xl mt-3">Welcome Back {userData.username}</h2>
         ) : null}
       </div>
     </div>
