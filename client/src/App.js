@@ -9,6 +9,7 @@ import Button from "./Button";
 import LinearGradient from "./LinearGradient";
 import Palette from "./Palette";
 import SaveModal from "./SaveModal";
+import NavBar from "./NavBar";
 
 //A functional component is the JavaScript function. App is the name of the function.
 function App() {
@@ -34,16 +35,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <nav className="fixed w-full z-10 flex items-center justify-between h-16 backdrop-filter backdrop-blur-lg bg-gray-600 bg-opacity-50">
-          <button className="px-7">
-            <img
-              className="h-6 float-left"
-              src="/images/hamburger-icon.png"
-              alt="Hamburger's icon"
-            />
-            <strong className="ml-1 float-left text-base text-white">
-              Menu
-            </strong>
-          </button>
+          <NavBar />
           <Modals />
         </nav>
       </header>
@@ -137,8 +129,8 @@ function App() {
         <section className="flex justify-evenly items-center mb-20 mt-28">
           <LinearGradient width="13%" />
           <p className="try-text">Here, why don't you just try it out?</p>
-          <LinearGradient width="13%"/>
-          </section>
+          <LinearGradient width="13%" />
+        </section>
         <section className="lightbox h-screen justify-center items-center flex">
           <div
             style={{
