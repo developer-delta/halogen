@@ -26,6 +26,7 @@ function App() {
        false, so setHidden is to toggle based on the false or true condition. */
   const [hidden, setHidden] = React.useState(false);
   const [innerHidden, setInnerHidden] = React.useState(false);
+  const [isFullScreen, setIsFullScreen] = React.useState(false);
 
   /* JSX is a templating language for React. It looks like a lot of HTML used for React. Currently, the codes show the curly
       braces, which is to treat the code located between JSX tags inside the curly braces as markers of the beginning and end
@@ -136,10 +137,33 @@ function App() {
             style={{
               backgroundImage: `radial-gradient(${innerColor}, ${color}`,
             }}
-            className="lightbox-sub rounded-lg relative w-full justify-center items-center flex pt-5 pb-5"
+            className={`lightbox-sub w-full rounded-lg relative justify-center items-center flex pt-5 pb-5 ${
+              isFullScreen ? "full-screen" : ""
+            }`}
           >
             <div className="lightbox-circle"></div>
             <SaveModal />
+            {/*Button to toggle between fullscreen and minimize icons*/}
+            <div className="absolute bottom-3.5 right-8">
+              <button
+                onClick={() => setIsFullScreen(!isFullScreen)}
+                className="bg-gray-500 px-2 py-1"
+              >
+                {isFullScreen ? (
+                  <img
+                    className="h-5"
+                    src="/images/minimize.png"
+                    alt="Minimize"
+                  />
+                ) : (
+                  <img
+                    className="h-5"
+                    src="/images/fullscreen.png"
+                    alt="Fullscreen"
+                  />
+                )}
+              </button>
+            </div>
             {hidden && (
               <SketchPicker
                 className="sketchpicker float-right "
@@ -149,7 +173,7 @@ function App() {
             )}
             <button
               onClick={() => setHidden(!hidden)}
-              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right absolute right-7 bottom-24"
+              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right absolute right-7 bottom-36"
             >
               {hidden
                 ? "Close color picker"
@@ -166,7 +190,7 @@ function App() {
             )}
             <button
               onClick={() => setInnerHidden(!innerHidden)}
-              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right absolute right-7 bottom-14"
+              className="bg-gray-200 text-black py-1 text-base px-3 rounded float-right right-7 sketch-inner "
             >
               {innerHidden
                 ? "Close color picker"
