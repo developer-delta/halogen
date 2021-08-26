@@ -8,7 +8,7 @@ function SaveModal() {
   const [modalIsOpen, setmodalIsOpen] = React.useState(false);
   return (
     <div>
-      <div className="absolute bottom-3 right-7">
+      <div className="absolute bottom-14 right-7">
         <Button
           text="Save"
           fontSize="1.2em"

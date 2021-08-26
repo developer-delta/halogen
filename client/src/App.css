@@ -21,12 +21,12 @@ main {
 }
 
 .lightbox-sub {
-  height: 95%;
+  height: 48.6rem;
 }
 
 .sketchpicker {
   position: absolute;
-  bottom: 15.6vh;
+  bottom: 21.4vh;
   right: 1vw;
 }
 
@@ -61,4 +61,18 @@ footer {
 }
 .try-text {
   font-size: 35px;
+}
+
+.sketch-inner {
+  position: absolute;
+  bottom: 6.5rem;
+}
+
+.full-screen {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border-radius: 0%;
 }
