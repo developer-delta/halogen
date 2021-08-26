@@ -153,13 +153,13 @@ function App() {
                   <img
                     className="h-5"
                     src="/images/minimize.png"
-                    alt="Minimize icon"
+                    alt="Minimize"
                   />
                 ) : (
                   <img
                     className="h-5"
                     src="/images/fullscreen.png"
-                    alt="Fullscreen icon "
+                    alt="Fullscreen"
                   />
                 )}
               </button>
