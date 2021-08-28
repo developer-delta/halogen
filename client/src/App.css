@@ -1,6 +1,7 @@
 * {
   font-family: "Nunito Sans", sans-serif;
   color: white;
+  scroll-behavior: smooth;
 }
 
 .App {

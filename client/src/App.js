@@ -51,12 +51,14 @@ function App() {
             <div className="flex flex-col justify-start">
               <LinearGradient width="400px"></LinearGradient>
               <div className="mb-8"></div>
-              <Button
-                width="135px"
-                height="45px"
-                fontSize="17px"
-                text="Get Started"
-              ></Button>
+              <a href="#scrollSection">
+                <Button
+                  width="135px"
+                  height="45px"
+                  fontSize="17px"
+                  text="Get Started"
+                ></Button>
+              </a>
             </div>
           </div>
           <div className="three-images w-1/2 flex flex-col items-center relative">
@@ -132,7 +134,10 @@ function App() {
           <p className="try-text">Here, why don't you just try it out?</p>
           <LinearGradient width="13%" />
         </section>
-        <section className="lightbox h-screen justify-center items-center flex">
+        <section
+          className="lightbox h-screen justify-center items-center flex"
+          id="scrollSection"
+        >
           <div
             style={{
               backgroundImage: `radial-gradient(${innerColor}, ${color}`,
