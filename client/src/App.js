@@ -10,6 +10,9 @@ import LinearGradient from "./LinearGradient";
 import Palette from "./Palette";
 import SaveModal from "./SaveModal";
 import NavBar from "./NavBar";
+//http://iamdustan.com/smoothscroll/ by Dustan Kasten & Jeremias Menichelli helps to enable smooth scroll for some major browsers
+import smoothscroll from "smoothscroll-polyfill";
+smoothscroll.polyfill(); //kick off the polyfill
 
 //A functional component is the JavaScript function. App is the name of the function.
 function App() {
@@ -27,6 +30,9 @@ function App() {
   const [hidden, setHidden] = React.useState(false);
   const [innerHidden, setInnerHidden] = React.useState(false);
   const [isFullScreen, setIsFullScreen] = React.useState(false);
+  const toLightBox = () => {
+    document.querySelector(".lightbox").scrollIntoView({ behavior: "smooth" });
+  };
 
   /* JSX is a templating language for React. It looks like a lot of HTML used for React. Currently, the codes show the curly
       braces, which is to treat the code located between JSX tags inside the curly braces as markers of the beginning and end
@@ -56,6 +62,7 @@ function App() {
                 height="45px"
                 fontSize="17px"
                 text="Get Started"
+                onClick={toLightBox}
               ></Button>
             </div>
           </div>
