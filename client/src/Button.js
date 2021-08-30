@@ -9,9 +9,10 @@ function Button(props) {
         fontSize: props.fontSize,
         color: props.color,
         background: props.background,
+        borderRadius: props.borderRadius,
+        border: props.border,
       }}
       {...props}
-      className="bg-gray-500 text-white px-4 py-1 rounded-full text-base hover:bg-gray-400"
     >
       {props.text}
     </button>

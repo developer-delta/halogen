@@ -10,6 +10,7 @@ import LinearGradient from "./LinearGradient";
 import Palette from "./Palette";
 import SaveModal from "./SaveModal";
 import NavBar from "./NavBar";
+import Glass from "./Glass";
 
 //A functional component is the JavaScript function. App is the name of the function.
 function App() {
@@ -56,6 +57,8 @@ function App() {
                 height="45px"
                 fontSize="17px"
                 text="Get Started"
+                borderRadius="20px"
+                border="2px solid white"
               ></Button>
             </div>
           </div>
@@ -145,24 +148,23 @@ function App() {
             <SaveModal />
             {/*Button to toggle between fullscreen and minimize icons*/}
             <div className="absolute bottom-3.5 right-8">
-              <button
-                onClick={() => setIsFullScreen(!isFullScreen)}
-                className="bg-gray-500 px-2 py-1"
-              >
-                {isFullScreen ? (
-                  <img
-                    className="h-5"
-                    src="/images/minimize.png"
-                    alt="Minimize"
-                  />
-                ) : (
-                  <img
-                    className="h-5"
-                    src="/images/fullscreen.png"
-                    alt="Fullscreen"
-                  />
-                )}
-              </button>
+              <Glass borderRadius="5px" padding="6px">
+                <button onClick={() => setIsFullScreen(!isFullScreen)}>
+                  {isFullScreen ? (
+                    <img
+                      className="h-5"
+                      src="/images/minimize.png"
+                      alt="Minimize"
+                    />
+                  ) : (
+                    <img
+                      className="h-5"
+                      src="/images/fullscreen.png"
+                      alt="Fullscreen"
+                    />
+                  )}
+                </button>
+              </Glass>
             </div>
             {hidden && (
               <SketchPicker

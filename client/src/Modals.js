@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import Button from "./Button";
+import Glass from "./Glass";
 import Passport from "./Passport";
 
 Modal.setAppElement("#root"); //To remove error/warning in console for accessibility reasons
@@ -13,7 +14,9 @@ function Modals(props) {
   return (
     <div>
       <div className="mr-10">
-        <Button text="Sign up" onClick={openModal} />
+        <Glass>
+          <Button text="Sign up" onClick={openModal} />
+        </Glass>
       </div>
       <Modal
         className="m-auto w-max mt-20 text-black"

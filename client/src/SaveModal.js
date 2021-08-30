@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import Button from "./Button";
+import Glass from "./Glass";
 import TextInput from "./TextInput";
 
 Modal.setAppElement("#root"); //To remove error/warning in console for accessibility reasons
@@ -9,11 +10,13 @@ function SaveModal() {
   return (
     <div>
       <div className="absolute bottom-14 right-7">
-        <Button
-          text="Save"
-          fontSize="1.2em"
-          onClick={() => setmodalIsOpen(true)}
-        />
+        <Glass borderRadius="10px" padding="5px">
+          <Button
+            text="Save"
+            fontSize="1.2em"
+            onClick={() => setmodalIsOpen(true)}
+          />
+        </Glass>
       </div>
       <div>
         <Modal

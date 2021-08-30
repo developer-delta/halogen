@@ -76,3 +76,8 @@ footer {
   z-index: 10;
   border-radius: 0%;
 }
+
+.glass {
+  background-color: rgba(255, 255, 255, 0.192);
+  backdrop-filter: blur(1px);
+}
