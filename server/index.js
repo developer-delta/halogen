@@ -43,11 +43,13 @@ app.use(
     credentials: true,
   })
 );
+app.enable('trust proxy');
 app.use(
   session({
     secret: sessionSecret,
     resave: true,
     saveUninitialized: true,
+    proxy: true,
   })
 );
 app.use(cookieParser(sessionSecret));
