@@ -8,13 +8,13 @@ const passportLocal = require("passport-local").Strategy; //passportLocal as a s
 const cookieParser = require("cookie-parser"); //parse all cookies that we use for the authentication
 const bcrypt = require("bcryptjs"); //for hashing the passwords
 const session = require("express-session"); //for our Express sessions
-const User = require("./userData");
+const User = require("./models/User");
 
 //Getting information from mockResponse.json
 const mockResponse = require("../mockResponse.json");
 
 const PORT = process.env.PORT || 3001;
-const clientUrl = process.env.CLIENT_URL || 'http://localhost:3000';
+const clientUrl = process.env.CLIENT_URL || "http://localhost:3000";
 const sessionSecret = process.env.SESSION_SECRET;
 
 const app = express();
@@ -43,7 +43,7 @@ app.use(
     credentials: true,
   })
 );
-app.enable('trust proxy');
+app.enable("trust proxy");
 app.use(
   session({
     secret: sessionSecret,
