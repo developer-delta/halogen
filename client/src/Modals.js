@@ -14,7 +14,7 @@ function Modals(props) {
   return (
     <div>
       <div className="mr-10">
-        <Glass>
+        <Glass dark="true">
           <Button text="Sign up" onClick={openModal} />
         </Glass>
       </div>
