@@ -37,7 +37,6 @@ module.exports = function (passport) {
     User.findOne({ _id: id }, (err, user) => {
       //Only going to send user information for getUser method (fron MongoDB)
       const userInformation = {
-        username: user.username, //To show username for Welcome Back part in Passport.js
         user, //For all data
       };
       cb(err, userInformation);
