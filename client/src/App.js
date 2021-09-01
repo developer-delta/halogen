@@ -10,6 +10,7 @@ import LinearGradient from "./LinearGradient";
 import Palette from "./Palette";
 import SaveModal from "./SaveModal";
 import NavBar from "./NavBar";
+import axios from "axios"; //Used to make the HTTP requests that we need
 //http://iamdustan.com/smoothscroll/ by Dustan Kasten & Jeremias Menichelli helps to enable smooth scroll for some major browsers
 import smoothscroll from "smoothscroll-polyfill";
 smoothscroll.polyfill(); //kick off the polyfill
@@ -30,9 +31,22 @@ function App() {
   const [hidden, setHidden] = React.useState(false);
   const [innerHidden, setInnerHidden] = React.useState(false);
   const [isFullScreen, setIsFullScreen] = React.useState(false);
+  const [userData, setUserData] = React.useState(null);
   const toLightBox = () => {
     document.querySelector(".lightbox").scrollIntoView({ behavior: "smooth" });
   };
+
+  React.useEffect(() => {
+    axios({
+      method: "GET",
+      withCredentials: true,
+      url: "http://localhost:3001/user",
+    }).then((res) => {
+      setUserData(res.data);
+      //console.log(res.data); //brings side effects of affecting browser's performance -- infinity error
+      //console.log(userData.username) //brings side effects of affecting browser's performance -- infinity error
+    });
+  });
 
   /* JSX is a templating language for React. It looks like a lot of HTML used for React. Currently, the codes show the curly
       braces, which is to treat the code located between JSX tags inside the curly braces as markers of the beginning and end

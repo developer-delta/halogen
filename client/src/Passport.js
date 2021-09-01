@@ -8,7 +8,6 @@ function Passport() {
   const [registerPassword, setRegisterPassword] = React.useState("");
   const [loginUsername, setLoginUsername] = React.useState("");
   const [loginPassword, setLoginPassword] = React.useState("");
-  const [userData, setUserData] = React.useState(null);
 
   //To run register, login, and get user methods -- Sent to the backend
   //In data property for register/login, from state values, when user types input and submit, they  will ship that data there
@@ -34,16 +33,7 @@ function Passport() {
       url: "http://localhost:3001/login",
     }).then((res) => console.log(res));
   };
-  const getUser = () => {
-    axios({
-      method: "GET",
-      withCredentials: true,
-      url: "http://localhost:3001/user",
-    }).then((res) => {
-      setUserData(res.data);
-      console.log(res.data);
-    });
-  };
+
   /* e as a parameter is event which in this case is onChange, target is an element that triggered event which in this 
     case is the input then the value is the value of the input element. This allows us to have access to our input through
      e.target.value. */
@@ -90,18 +80,7 @@ function Passport() {
           </div>
         </fieldset>
       </div>
-      <div className="flex justify-center items-center text-center flex-col pb-10 text-black ">
-        <button
-          className="bg-white hover:bg-gray-700 hover:text-white font-bold py-2 px-8 rounded-full mt-5"
-          type="button"
-          onClick={getUser}
-        >
-          Get Logged in User!
-        </button>
-        {userData ? (
-          <h2 className="text-xl mt-3">Welcome Back {userData.username}</h2>
-        ) : null}
-      </div>
+      <div className="flex justify-center items-center text-center flex-col pb-10 text-black "></div>
     </div>
   );
 }
