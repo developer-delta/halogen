@@ -10,7 +10,6 @@ import LinearGradient from "./LinearGradient";
 import Palette from "./Palette";
 import SaveModal from "./SaveModal";
 import NavBar from "./NavBar";
-import Glass from "./Glass";
 //http://iamdustan.com/smoothscroll/ by Dustan Kasten & Jeremias Menichelli helps to enable smooth scroll for some major browsers
 import smoothscroll from "smoothscroll-polyfill";
 smoothscroll.polyfill(); //kick off the polyfill
@@ -152,14 +151,11 @@ function App() {
             }`}
           >
             <div className="lightbox-circle"></div>
-            <div className="absolute bottom-5 right-0">
-              <Glass dark="true">
-                <SaveModal />
-              </Glass>
+            <div className="glass absolute bottom-12 right-5 rounded-full px-5 py-1">
+              <SaveModal />
             </div>
             {/*Button to toggle between fullscreen and minimize icons*/}
             <div className="absolute bottom-3.5 right-8">
-              <Glass dark="true">
                 <button onClick={() => setIsFullScreen(!isFullScreen)}>
                   {isFullScreen ? (
                     <img
@@ -175,7 +171,6 @@ function App() {
                     />
                   )}
                 </button>
-              </Glass>
             </div>
             {hidden && (
               <SketchPicker
