@@ -1,7 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
 import Button from "./Button";
-import Glass from "./Glass";
 import Passport from "./Passport";
 
 Modal.setAppElement("#root"); //To remove error/warning in console for accessibility reasons
@@ -13,10 +12,8 @@ function Modals(props) {
   const closeModal = () => setmodalIsOpen(false);
   return (
     <div>
-      <div className="mr-10">
-        <Glass>
-          <Button text="Sign up" onClick={openModal} />
-        </Glass>
+      <div className="glass-dark px-5 py-1 rounded-full mr-10">
+        <Button text="Sign up" onClick={openModal} />
       </div>
       <Modal
         className="m-auto w-max mt-20 text-black"

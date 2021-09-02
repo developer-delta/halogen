@@ -56,6 +56,16 @@ main {
   box-shadow: 2px 1000px 1px rgb(223, 219, 219) inset;
 }
 
+.glass-dark {
+  backdrop-filter: blur(8px);
+  background-color: rgb(56 56 56 / 70%);
+}
+
+.glass {
+  backdrop-filter: blur(8px);
+  background-color: rgb(68 68 68 / 50%);
+}
+
 footer {
   text-align: center;
 }
