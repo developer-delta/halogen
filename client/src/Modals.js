@@ -12,7 +12,7 @@ function Modals(props) {
   const closeModal = () => setmodalIsOpen(false);
   return (
     <div>
-      <div className="mr-10">
+      <div className="glass-dark px-5 py-1 rounded-full mr-10">
         <Button text="Sign up" onClick={openModal} />
       </div>
       <Modal

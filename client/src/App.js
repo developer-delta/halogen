@@ -151,11 +151,11 @@ function App() {
             }`}
           >
             <div className="lightbox-circle"></div>
-            <div className="glass absolute bottom-12 right-5 rounded-full px-5 py-1">
+            <div className="glass absolute bottom-14 right-5 rounded-full px-5 py-1">
               <SaveModal />
             </div>
             {/*Button to toggle between fullscreen and minimize icons*/}
-            <div className="absolute bottom-3.5 right-8">
+            <div className="glass flex p-2 rounded-full absolute bottom-3.5 right-8">
                 <button onClick={() => setIsFullScreen(!isFullScreen)}>
                   {isFullScreen ? (
                     <img
