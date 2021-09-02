@@ -43,10 +43,8 @@ function App() {
       url: "http://localhost:3001/user",
     }).then((res) => {
       setUserData(res.data);
-      //console.log(res.data); //brings side effects of affecting browser's performance -- infinity error
-      //console.log(userData.username) //brings side effects of affecting browser's performance -- infinity error
     });
-  });
+  }, []);
 
   /* JSX is a templating language for React. It looks like a lot of HTML used for React. Currently, the codes show the curly
       braces, which is to treat the code located between JSX tags inside the curly braces as markers of the beginning and end
@@ -220,6 +218,7 @@ function App() {
           </div>
         </section>
         <section className="palette">
+          <p>{userData && userData.user.username}</p>
           <Palette />
         </section>
       </main>
