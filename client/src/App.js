@@ -205,7 +205,7 @@ function App() {
             </button>
           </div>
         </section>
-        <section className="palette">
+        <section className="palette overflow-x-auto">
           <Palette />
         </section>
       </main>
