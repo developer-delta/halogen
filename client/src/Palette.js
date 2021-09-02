@@ -1,33 +1,25 @@
 import React from "react";
+import defaultPalettes from "./defaultPalettes.js";
 
 function Palette() {
-  const [paletteItems, setPaletteItems] = React.useState();
-
-  React.useEffect(() => {
-    fetch('/profiles')
-      .then((res) => res.json())
-      .then((data) => {
-        setPaletteItems(data.palettes);
-      });
-  }, []);
-
   return (
     <div className="flex">
-      {paletteItems &&
-        paletteItems.map((palettes) => (
-          <div className="relative m-3" key={palettes.ringName}>
-            <div className=" flex justify-center items-center">
-              <div className="palette-circle absolute top-0 mt-10"></div>
-              <p className="absolute bottom-0 opacity-0 hover:opacity-100 bg-gray-500 w-full text-center p-2 rounded-b-2xl">
-                {palettes.ringName}
-              </p>
-            </div>
-            <div
-              className="w-52 h-52 rounded-2xl"
-              style={{ background: palettes.outerRingColor }}
-            ></div>
+      {defaultPalettes.palettes.map((data) => (
+        <div className="relative m-3" key={data.ringName}>
+          <div className=" flex justify-center data-center">
+            <div className="palette-circle absolute top-0 mt-10"></div>
+            <p className="absolute bottom-0 opacity-0 hover:opacity-100 bg-gray-500 w-full text-center p-2 rounded-b-2xl">
+              {data.ringName}
+            </p>
           </div>
-        ))}
+          <div
+            className="w-52 h-52 rounded-2xl"
+            style={{
+              backgroundImage: `radial-gradient(${data.innerGradientColor}, ${data.outerGradientColor}`,
+            }}
+          ></div>
+        </div>
+      ))}
     </div>
   );
 }
