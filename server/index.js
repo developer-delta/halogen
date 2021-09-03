@@ -15,7 +15,6 @@ const mockResponse = require("../mockResponse.json");
 
 const PORT = process.env.PORT || 3001;
 const clientUrl = process.env.CLIENT_URL || "http://localhost:3000";
-const sessionSecret = process.env.SESSION_SECRET;
 
 const app = express();
 app.use(express.static(path.resolve(__dirname, "../client/build")));
