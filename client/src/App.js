@@ -74,6 +74,8 @@ function App() {
                 height="45px"
                 fontSize="17px"
                 text="Get Started"
+                borderRadius="20px"
+                border="2px solid white"
                 onClick={toLightBox}
               ></Button>
             </div>
@@ -161,27 +163,26 @@ function App() {
             }`}
           >
             <div className="lightbox-circle"></div>
-            <SaveModal />
+            <div className="glass absolute bottom-14 right-5 rounded-full px-5 py-1">
+              <SaveModal />
+            </div>
             {/*Button to toggle between fullscreen and minimize icons*/}
-            <div className="absolute bottom-3.5 right-8">
-              <button
-                onClick={() => setIsFullScreen(!isFullScreen)}
-                className="bg-gray-500 px-2 py-1"
-              >
-                {isFullScreen ? (
-                  <img
-                    className="h-5"
-                    src="/images/minimize.png"
-                    alt="Minimize"
-                  />
-                ) : (
-                  <img
-                    className="h-5"
-                    src="/images/fullscreen.png"
-                    alt="Fullscreen"
-                  />
-                )}
-              </button>
+            <div className="glass flex p-2 rounded-full absolute bottom-3.5 right-8">
+                <button onClick={() => setIsFullScreen(!isFullScreen)}>
+                  {isFullScreen ? (
+                    <img
+                      className="h-5"
+                      src="/images/minimize.png"
+                      alt="Minimize"
+                    />
+                  ) : (
+                    <img
+                      className="h-5"
+                      src="/images/fullscreen.png"
+                      alt="Fullscreen"
+                    />
+                  )}
+                </button>
             </div>
             {hidden && (
               <SketchPicker
@@ -217,7 +218,7 @@ function App() {
             </button>
           </div>
         </section>
-        <section className="palette">
+        <section className="palette overflow-x-auto">
           <p>{userData && userData.user.username}</p>
           <Palette />
         </section>

@@ -8,13 +8,11 @@ function SaveModal() {
   const [modalIsOpen, setmodalIsOpen] = React.useState(false);
   return (
     <div>
-      <div className="absolute bottom-14 right-7">
-        <Button
-          text="Save"
-          fontSize="1.2em"
-          onClick={() => setmodalIsOpen(true)}
-        />
-      </div>
+      <Button
+        text="Save"
+        fontSize="1.2em"
+        onClick={() => setmodalIsOpen(true)}
+      />
       <div>
         <Modal
           className="m-auto w-max mt-20 text-black"

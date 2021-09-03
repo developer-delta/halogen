@@ -1,5 +1,5 @@
 //For all the configuration for passports so we can authenticate a user
-const User = require("./userData");
+const User = require("./models/User");
 const bcrypt = require("bcryptjs");
 const localStrategy = require("passport-local").Strategy;
 
@@ -37,7 +37,7 @@ module.exports = function (passport) {
     User.findOne({ _id: id }, (err, user) => {
       //Only going to send user information for getUser method (fron MongoDB)
       const userInformation = {
-        username: user.username,
+        user, //For all data
       };
       cb(err, userInformation);
     });

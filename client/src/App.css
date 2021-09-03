@@ -39,8 +39,8 @@ main {
 
 .palette-circle {
   border: 1rem solid #fff;
-  height: 7rem;
-  width: 7rem;
+  height: 8rem;
+  width: 8rem;
   border-radius: 50%;
 }
 
@@ -54,6 +54,16 @@ main {
   background-image: linear-gradient(101deg, #78e4ff, #ff48fa);
   background-origin: border-box;
   box-shadow: 2px 1000px 1px rgb(223, 219, 219) inset;
+}
+
+.glass-dark {
+  backdrop-filter: blur(8px);
+  background-color: rgb(56 56 56 / 70%);
+}
+
+.glass {
+  backdrop-filter: blur(8px);
+  background-color: rgb(68 68 68 / 50%);
 }
 
 footer {
