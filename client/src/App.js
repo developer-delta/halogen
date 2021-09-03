@@ -40,7 +40,9 @@ function App() {
     axios({
       method: "GET",
       withCredentials: true,
-      url: process.env.PROD ? "http://halogen-web-app.herokuapp.com:80/user" : "http://localhost:3001/user",
+      url: process.env.PROD
+        ? "http://halogen-web-app.herokuapp.com:80/user"
+        : "http://localhost:3001/user",
     }).then((res) => {
       setUserData(res.data);
     });
@@ -74,7 +76,7 @@ function App() {
                 height="45px"
                 fontSize="17px"
                 text="Get Started"
-                borderRadius="20px"
+                borderradius="20px"
                 border="2px solid white"
                 onClick={toLightBox}
               ></Button>
@@ -168,21 +170,21 @@ function App() {
             </div>
             {/*Button to toggle between fullscreen and minimize icons*/}
             <div className="glass flex p-2 rounded-full absolute bottom-3.5 right-8">
-                <button onClick={() => setIsFullScreen(!isFullScreen)}>
-                  {isFullScreen ? (
-                    <img
-                      className="h-5"
-                      src="/images/minimize.png"
-                      alt="Minimize"
-                    />
-                  ) : (
-                    <img
-                      className="h-5"
-                      src="/images/fullscreen.png"
-                      alt="Fullscreen"
-                    />
-                  )}
-                </button>
+              <button onClick={() => setIsFullScreen(!isFullScreen)}>
+                {isFullScreen ? (
+                  <img
+                    className="h-5"
+                    src="/images/minimize.png"
+                    alt="Minimize"
+                  />
+                ) : (
+                  <img
+                    className="h-5"
+                    src="/images/fullscreen.png"
+                    alt="Fullscreen"
+                  />
+                )}
+              </button>
             </div>
             {hidden && (
               <SketchPicker

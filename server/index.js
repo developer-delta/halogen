@@ -43,16 +43,14 @@ app.use(
     credentials: true,
   })
 );
-app.enable("trust proxy");
 app.use(
   session({
-    secret: sessionSecret,
+    secret: "sessionSecret",
     resave: true,
     saveUninitialized: true,
-    proxy: true,
   })
 );
-app.use(cookieParser(sessionSecret));
+app.use(cookieParser("sessionSecret"));
 app.use(passport.initialize()); //Intitializes passport to make this fully functional
 app.use(passport.session()); //Intitializes the session that is part of passport
 require("./passportConfig")(passport); //Pass the instance of passport that we have used as a parameter
