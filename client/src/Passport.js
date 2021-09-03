@@ -19,7 +19,9 @@ function Passport() {
         password: registerPassword,
       },
       withCredentials: true,
-      url: process.env.PROD ? "http://halogen-web-app.herokuapp.com:80/register" : "http://localhost:3001/register",
+      url: process.env.PROD
+        ? "http://halogen-web-app.herokuapp.com:80/register"
+        : "http://localhost:3001/register",
     }).then((res) => console.log(res));
   };
   const login = () => {
@@ -30,7 +32,9 @@ function Passport() {
         password: loginPassword,
       },
       withCredentials: true, // allows for cross-origin resource sharing on different URLs
-      url: process.env.PROD ? "http://halogen-web-app.herokuapp.com:80/login" : "http://localhost:3001/login",
+      url: process.env.PROD
+        ? "http://halogen-web-app.herokuapp.com:80/login"
+        : "http://localhost:3001/login",
     }).then((res) => console.log(res));
   };
 
@@ -59,7 +63,14 @@ function Passport() {
             onChange={(e) => setRegisterPassword(e.target.value)}
           />
           <div className="pt-5 text-center">
-            <Button text="Submit" onClick={register} />
+            <Button
+              width="85px"
+              height="30px"
+              borderradius="10px"
+              border="1px solid"
+              text="Submit"
+              onClick={register}
+            />
           </div>
         </fieldset>
 
@@ -76,7 +87,14 @@ function Passport() {
             onChange={(e) => setLoginPassword(e.target.value)}
           />
           <div className="pt-5 text-center">
-            <Button text="Submit" onClick={login} />
+            <Button
+              width="85px"
+              height="30px"
+              borderradius="10px"
+              border="1px solid"
+              text="Submit"
+              onClick={login}
+            />
           </div>
         </fieldset>
       </div>
