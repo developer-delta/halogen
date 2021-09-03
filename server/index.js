@@ -24,7 +24,7 @@ app.use(express.static(path.resolve(__dirname, "../client/build")));
 // getting-started.js
 mongoose.connect(
   process.env.HALOGEN_WEB || "mongodb://localhost:3001/showtracker",
-  { useNewUrlParser: true, useUnifiedTopology: true }
+  { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
 );
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
