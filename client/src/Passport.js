@@ -59,7 +59,14 @@ function Passport() {
             onChange={(e) => setRegisterPassword(e.target.value)}
           />
           <div className="pt-5 text-center">
-            <Button text="Submit" onClick={register} />
+            <Button
+              width="85px"
+              height="30px"
+              borderradius="10px"
+              border="1px solid"
+              text="Submit"
+              onClick={register}
+            />
           </div>
         </fieldset>
 
@@ -76,7 +83,14 @@ function Passport() {
             onChange={(e) => setLoginPassword(e.target.value)}
           />
           <div className="pt-5 text-center">
-            <Button text="Submit" onClick={login} />
+            <Button
+              width="85px"
+              height="30px"
+              borderradius="10px"
+              border="1px solid"
+              text="Submit"
+              onClick={login}
+            />
           </div>
         </fieldset>
       </div>
