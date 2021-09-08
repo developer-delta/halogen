@@ -13,7 +13,7 @@ import NavBar from "./NavBar";
 import axios from "axios"; //Used to make the HTTP requests that we need
 //http://iamdustan.com/smoothscroll/ by Dustan Kasten & Jeremias Menichelli helps to enable smooth scroll for some major browsers
 import smoothscroll from "smoothscroll-polyfill";
-smoothscroll.polyfill(); //kick off the polyfill
+smoothscroll.polyfill();
 
 //A functional component is the JavaScript function. App is the name of the function.
 function App() {

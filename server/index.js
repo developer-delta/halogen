@@ -4,14 +4,10 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const cors = require("cors"); //for security
 const passport = require("passport"); //for entire authentication library
-const passportLocal = require("passport-local").Strategy; //passportLocal as a strategy --- local username and password
 const cookieParser = require("cookie-parser"); //parse all cookies that we use for the authentication
 const bcrypt = require("bcryptjs"); //for hashing the passwords
 const session = require("express-session"); //for our Express sessions
 const User = require("./models/User");
-
-//Getting information from mockResponse.json
-const mockResponse = require("../mockResponse.json");
 
 const PORT = process.env.PORT || 3001;
 const clientUrl = process.env.CLIENT_URL || "http://localhost:3000";
@@ -19,13 +15,12 @@ const sessionSecret = process.env.SESSION_SECRET;
 
 const app = express();
 app.use(express.static(path.resolve(__dirname, "../client/build")));
-//Mongoose setup code below
 
-// getting-started.js
 mongoose.connect(
   process.env.HALOGEN_WEB || "mongodb://localhost:3001/showtracker",
   { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
 );
+
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", function () {
@@ -53,18 +48,13 @@ app.use(
   })
 );
 app.use(cookieParser(sessionSecret));
-app.use(passport.initialize()); //Intitializes passport to make this fully functional
-app.use(passport.session()); //Intitializes the session that is part of passport
-require("./passportConfig")(passport); //Pass the instance of passport that we have used as a parameter
+app.use(passport.initialize());
+app.use(passport.session());
+require("./passportConfig")(passport);
 
 //----------------------------------------- END OF MIDDLEWARE-----------------------------------------------
 
 //----------------------------------------- START OF ROUTES-------------------------------------------------
-
-//Uses res.json to return mockResponse as json
-app.get("/profiles", function (req, res, next) {
-  res.json(mockResponse);
-});
 
 //------Routes for Passport
 //Implement local strategy that we defined in passportConfig.js and autenticate users (login users from the authentication method)
@@ -80,27 +70,28 @@ app.post("/login", (req, res, next) => {
         console.log(req.user);
       });
     }
-  })(req, res, next); //Have their request in a response and next parameter is to move on to the next route
+  })(req, res, next); // next parameter is to move on to the next route in middleware chain
 });
 
 app.post("/register", (req, res) => {
   User.findOne({ username: req.body.username }, async (err, doc) => {
     if (err) throw err;
-    if (doc) res.send("User Already Exists");
-    if (!doc) {
-      const hashedPassword = await bcrypt.hash(req.body.password, 10); //Hash password to eliminate plain text password
-      const newUser = new User({
-        username: req.body.username,
-        password: hashedPassword,
-      });
-      await newUser.save();
-      res.send("User Created");
-    }
+    if (doc) return res.send("User Already Exists");
+    
+    // summary of hashing and salting - https://stackoverflow.com/questions/18084595/how-to-decrypt-hash-stored-by-bcrypt
+    const saltRounds = 10;
+    const hashedPassword = await bcrypt.hash(req.body.password, saltRounds);
+    const newUser = new User({
+      username: req.body.username,
+      password: hashedPassword,
+    });
+    await newUser.save();
+    res.send("User Created");
   });
 });
 
 app.get("/user", (req, res) => {
-  res.send(req.user); // The req.user stores the entire user that has been authenticated inside of it.
+  res.send(req.user); // req.user contains the entire user that has been authenticated
   console.log(req.user);
 });
 
