@@ -19,7 +19,7 @@ function Passport() {
         password: registerPassword,
       },
       withCredentials: true,
-      url: process.env.PROD ? "http://halogen-web-app.herokuapp.com:80/register" : "http://localhost:3001/register",
+      url: "/register",
     }).then((res) => console.log(res));
   };
   const login = () => {
@@ -30,7 +30,7 @@ function Passport() {
         password: loginPassword,
       },
       withCredentials: true, // allows for cross-origin resource sharing on different URLs
-      url: process.env.PROD ? "http://halogen-web-app.herokuapp.com:80/login" : "http://localhost:3001/login",
+      url: "/login",
     }).then((res) => console.log(res));
   };
 

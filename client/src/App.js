@@ -40,7 +40,7 @@ function App() {
     axios({
       method: "GET",
       withCredentials: true,
-      url: process.env.PROD ? "http://halogen-web-app.herokuapp.com:80/user" : "http://localhost:3001/user",
+      url: "/user",
     }).then((res) => {
       setUserData(res.data);
     });
