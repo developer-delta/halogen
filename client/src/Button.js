@@ -9,7 +9,7 @@ function Button(props) {
         fontSize: props.fontSize,
         color: props.color,
         background: props.background,
-        borderRadius: props.borderRadius,
+        borderRadius: props.borderradius,
         border: props.border,
       }}
       {...props}
