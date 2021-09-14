@@ -2,10 +2,31 @@ import React from "react";
 import Modal from "react-modal";
 import Button from "./Button";
 import TextInput from "./TextInput";
+import axios from 'axios';
 
 Modal.setAppElement("#root"); //To remove error/warning in console for accessibility reasons
-function SaveModal() {
+
+function SaveModal(props) {
+  
   const [modalIsOpen, setmodalIsOpen] = React.useState(false);
+  const [paletteName, setPaletteName] = React.useState("");
+  
+  const savePalette = () => {
+    axios({
+      method: "PUT",
+      data: {
+        name: paletteName,
+        color: props.color,
+        innerColor: props.innerColor,
+      },
+      withCredentials: true,
+      url: "/save-palette",
+    }).then((res) => {
+      props.onUserDataChange({user: res.data});
+      setmodalIsOpen(false);
+    });
+  };
+
   return (
     <div>
       <Button
@@ -31,7 +52,7 @@ function SaveModal() {
         >
           <div className="bg-gray-600 py-10 px-16 rounded-lg text-center">
             <h2>Give your new palette a name!</h2>
-            <TextInput placeholder="Add Palette's Name" />
+            <TextInput placeholder="Add Palette's Name" onChange={(e) => setPaletteName(e.target.value)} />
             <div className="mt-5 flex justify-between">
               <Button
                 text="Cancel"
@@ -45,6 +66,7 @@ function SaveModal() {
                 color="black"
                 background="white"
                 width="48%"
+                onClick={() => savePalette()}
               />
             </div>
           </div>

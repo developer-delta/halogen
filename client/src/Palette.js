@@ -1,10 +1,9 @@
 import React from "react";
-import defaultPalettes from "./defaultPalettes.js";
 
-function Palette() {
+function Palette(props) {
   return (
     <div className="flex">
-      {defaultPalettes.palettes.map((data) => (
+      {props.palettes.map((data) => (
         <div className="relative m-3" key={data.ringName}>
           <div className=" flex justify-center data-center">
             <div className="palette-circle absolute top-14"></div>

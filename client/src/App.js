@@ -10,6 +10,8 @@ import LinearGradient from "./LinearGradient";
 import Palette from "./Palette";
 import SaveModal from "./SaveModal";
 import NavBar from "./NavBar";
+import defaultPalettes from "./defaultPalettes.js";
+
 import axios from "axios"; //Used to make the HTTP requests that we need
 //http://iamdustan.com/smoothscroll/ by Dustan Kasten & Jeremias Menichelli helps to enable smooth scroll for some major browsers
 import smoothscroll from "smoothscroll-polyfill";
@@ -164,7 +166,7 @@ function App() {
           >
             <div className="lightbox-circle"></div>
             <div className="glass absolute bottom-14 right-5 rounded-full px-5 py-1">
-              <SaveModal />
+              <SaveModal color={color} innerColor={innerColor} onUserDataChange={(userData) => setUserData(userData)}/>
             </div>
             {/*Button to toggle between fullscreen and minimize icons*/}
             <div className="glass flex p-2 rounded-full absolute bottom-3.5 right-8">
@@ -220,7 +222,7 @@ function App() {
         </section>
         <section className="palette overflow-x-auto">
           <p>{userData && userData.user.username}</p>
-          <Palette />
+          <Palette palettes={ (userData && userData.user) ? userData.user.palettes : defaultPalettes.palettes }/>
         </section>
       </main>
       <footer className="w-full bottom-0 items-center flex flex-full flex-col py-20">

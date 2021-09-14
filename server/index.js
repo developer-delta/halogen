@@ -90,6 +90,23 @@ app.post("/register", (req, res) => {
   });
 });
 
+app.put("/save-palette", async (req, res) => {
+  if(!req.user) return res.send("User is not logged in");
+
+  const newPalette = {
+    outerGradientColor: req.body.color,
+    innerGradientColor: req.body.innerColor,
+    ringColor: "#FFFFFF",
+    ringName: req.body.name,
+  };
+
+  const updatedUser = await User.findOneAndUpdate({ _id: req.user.user.id }, {$addToSet: {palettes: newPalette}}, (err, doc, res) => {
+    if(err) return res.send("error updating user");
+  }, {new: true});
+
+  res.send(updatedUser);
+})
+
 app.get("/user", (req, res) => {
   res.send(req.user); // req.user contains the entire user that has been authenticated
   console.log(req.user);
