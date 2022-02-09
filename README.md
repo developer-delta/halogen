@@ -1,34 +1,33 @@
-![screencapture of halogen design](https://i.imgur.com/wOqaeSV.png)
+![Halogen logo](https://user-images.githubusercontent.com/13723156/153255208-9484f866-82ef-4e2d-ba0c-e1d8e2ae941f.png)
 
 ---
 
 ## Running locally
 
 #### 1. Fork this repository 
+
 !["Fork" button on github](https://i.imgur.com/TVRPe9R.png)
 
-#### 2. Copy repo URL for cloning
+#### 2. Clone
+
 ![git clone link in github](https://i.imgur.com/DpiDwwy.png)
 
-#### 3. Clone
-```shell
+```sh
   git clone https://github.com/developer-delta/halogen.git
 ```
 
-#### 4. `cd` into the halogen directory
-```shell
+#### 3. `cd` into the halogen directory
+
+```sh
   cd halogen
 ```
-#### 5. Make sure you have your IDE install 
-[Visual Studio Code is recommended](https://code.visualstudio.com/download)
 
-## For Visual Studio Code users 
-Here is the `launch.json` configuration for running the server and the client simultaneously
-```
+## [VSCode](https://code.visualstudio.com/download) setup
+
+> Here are the recommended configurations for your `launch.json`
+
+```json
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
     {
@@ -62,6 +61,5 @@ Here is the `launch.json` configuration for running the server and the client si
 ## Looking to contribute?
 
 If you'd like to help build halogen, head over to the **[contributing guidelines](CONTRIBUTING.md)** page.
-
 
 ###### _This is a great place to start with open source!_ 🍻
