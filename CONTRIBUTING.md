@@ -17,7 +17,11 @@ _This guide will walk you through the steps you need to take to start contributi
   * _(more details on `fork` and `clone` are in the [README.md](README.md) file)_
 
 ### 3. Find an issue to work on
-
+  
+  You can find an [interactive design mockup here](https://xd.adobe.com/view/5d8116ab-aaca-433c-9b16-2f883df98c75-08d2/) that will help if you choose an issue with UI elements. This is an evolving document, so if something seems off, send us a message and we'll take a look!
+  
+<!--   TODO: Add in link for design system -->
+  
   Navigate to the `issues` tab, and see if any of the current unassigned issues look like something you'd like to tackle. If one catches your eye, open it up and add a comment requesting that it gets assigned to you.
   * _If you're really feeling lost, but would like to get your feet wet just a little bit, go ahead and create an issue using the [Beginner help](https://github.com/developer-delta/halogen/issues/new?assignees=&labels=beginner-work-wanted&template=beginner-help.md&title=Entry-level+story+requested) template_.
 
