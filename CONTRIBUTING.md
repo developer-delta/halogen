@@ -1,6 +1,6 @@
-# Welcome to halogen!
+# Welcome to Halogen!
 
-_This guide will walk you through the steps you need to take to start contributing to this repo!_
+_This guide will walk you through the steps you need to take to start contributing to this repository!_
 
 [![Your first open source contribution](https://i.imgur.com/ykzMaD1.jpg)](https://youtu.be/qbSXgUFnQ2g)
 
@@ -10,7 +10,7 @@ _This guide will walk you through the steps you need to take to start contributi
 
 ### 1. First up, if you haven't already, make sure to `fork` this repository
 
-  _This is the first step in the open source development workflow. A fork is basically a **copy**_
+  _This is the first step in the open source development workflow. A fork is basically your own personal **copy** of this repo_
 
 ### 2. Clone the repository down to your computer
 
@@ -25,34 +25,41 @@ _This guide will walk you through the steps you need to take to start contributi
 
   If you selected an issue that was not assigned to someone else and had no comments on it, you can probably safely move forward to the next steps, but if you want to be certain someone else isn't doing the same work, you should wait to be assigned, it won't take long!
 
-### 5. Create a feature branch for the work you will be doing
-  ```shell
+### 5. Create a feature branch for the work you will be doing (If you need to go over forking, cloning, branching, etc, [GitHub has some great guides](https://docs.github.com/en/get-started/quickstart/contributing-to-projects))
+
+  ```sh
   git checkout -b your-cool-branch-name
   ```
 
 ### 6. Make code changes
-  ```javascript
+
+  ```js
   console.log("You're doing it!");
   ```
+  
 ### 7. Add the files you made changes to
-  ```shell
+
+  ```sh
   git add changed-file1.html
   git add changed-file2.js
   git add changed-file3.css
   
-  you can also run: git add .
-  This will automatically add all the files you made changes too. 
+  # you can also run: git add .
+  # This will automatically add all the files you made changes too. 
   ```
 
 ### 8. Commit your code changes
-  ```shell 
+
+  ```sh 
   git commit -m "finished my feature work"
   ```
 
 ### 9. Push your changes up to your feature branch
-  ```shell
+
+  ```sh
   git push --set-upstream origin your-cool-branch-name
   ```
+  
   > _You only need `--set-upstream origin branch-name` the _first_ time you push to a new branch. Subsequent pushes to that branch can just use `git push`._
 
 ### 10. Submit a pull request
